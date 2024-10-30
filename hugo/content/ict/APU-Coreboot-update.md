@@ -1,7 +1,7 @@
 --- 
 date: 2019-12-12 00:00:00
 category: apu
-tags: apu,pcengines,coreboot
+tags: apu, pcengines, coreboot
 ---
 
 # apu coreboot update
