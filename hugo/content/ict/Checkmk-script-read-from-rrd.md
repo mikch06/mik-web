@@ -1,8 +1,13 @@
 --- 
 date: 2024-03-15 00:00:00
 category: checkmk
-tags: checkmk, linux, monitoring
+tags: 
+- checkmk
+- linux
+- monitoring
 ---
+
+test
 
 Checkmk local script:
 
