@@ -2,3 +2,5 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'ICT pages'
 theme = 'ananke'
+
+enableEmoji = true
