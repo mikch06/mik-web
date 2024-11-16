@@ -1,7 +1,10 @@
 --- 
 date: 2017-02-11 00:00:00
 category: linux
-tags: openssl- cert- key
+tags: 
+- openssl
+- cert
+- key
 ---
 # Linux OpenSSL commands
 

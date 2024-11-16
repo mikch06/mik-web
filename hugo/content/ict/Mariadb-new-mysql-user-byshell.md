@@ -1,7 +1,12 @@
 --- 
 date: 2015-09-08 00:00:00
 category: MySQL
-tags: centos- mariadb- mysql- user- shell
+tags: 
+- centos
+- mariadb
+- mysql
+- user
+- shell
 ---
 # MySQL Create new MySQL user by shell
 

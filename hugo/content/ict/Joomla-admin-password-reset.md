@@ -1,7 +1,9 @@
 --- 
 date: 2015-09-08 00:00:00
 category: joomla
-tags: Joomla- password reset
+tags: 
+- Joomla
+- password reset
 ---
 #Joomla! Admin Passwort reset
 

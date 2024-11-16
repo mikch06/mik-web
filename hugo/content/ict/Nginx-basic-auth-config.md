@@ -1,7 +1,10 @@
 --- 
 date: 2020-04-05 00:00:00
 category: nginx
-tags: nginx- Basic Auth- Linux
+tags: 
+- nginx
+- Basic Auth
+- Linux
 ---
 # Nginx Basic Auth config
 

@@ -1,7 +1,10 @@
 --- 
 date: 2015-09-07 00:00:00
 category: macos
-tags: MacOS- flush- cache
+tags: 
+- MacOS
+- flush
+- cache
 ---
 # MacOS KnowHow
 

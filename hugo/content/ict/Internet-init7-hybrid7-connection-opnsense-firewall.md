@@ -1,7 +1,9 @@
 --- 
 date: 2020-07-17 00:00:00
 category: opnsense
-tags: Init7- Hybrid7
+tags: 
+- Init7
+- Hybrid7
 ---
 # Init7 - Hybrid7 connection with Opnsense Firewall
 

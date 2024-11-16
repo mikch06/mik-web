@@ -1,7 +1,10 @@
 --- 
 date: 2015-09-17 00:00:00
 category: centos
-tags: centos- mariadb- mysql
+tags: 
+- centos
+- mariadb
+- mysql
 ---
 # MariaDB Installation on CentsOS7
 
