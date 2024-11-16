@@ -1,7 +1,7 @@
 --- 
 date: 2020-07-15 00:00:00
 category: linux
-tags: linux, socks5, putty, foxyproxy
+tags: linux- socks5- putty- foxyproxy
 ---
 # SOCKS(5) Proxy Know How
 
@@ -30,5 +30,5 @@ ssh -D 2409 user@2host.ch
 
 Browser (e.g. firefox) / or FoxyProxy config from above
 -> Settings -> Network Settings -> Manual proxy configuration 
-SOCKS Host: localhost, Port: 2409
+SOCKS Host: localhost- Port: 2409
 </pre>

@@ -1,11 +1,11 @@
 --- 
 date: 2023-07-20 00:00:00
 category: opnsense
-tags: opnsense, certs-->
+tags: opnsense- certs-->
 ---
 # Opnsense acme-client
 
-## Acme client, let's encrypt
+## Acme client- let's encrypt
 
 ### Issue new cert in opnsense UI
 Wait for a long time until it's issued with acme.sh client.

@@ -1,7 +1,7 @@
 --- 
 date: 2015-09-07 00:00:00
 category: solaris
-tags: Solaris11, Unix, DNS
+tags: Solaris11- Unix- DNS
 ---
 # Configure DNS Client
 

@@ -1,7 +1,7 @@
 ---
 date: 2020-06-03 00:00:00
 category: centos
-tags: CentOS, Linux, ipv6
+tags: CentOS- Linux- ipv6
 ---
 # Disable ipv6 on CentOS8
 

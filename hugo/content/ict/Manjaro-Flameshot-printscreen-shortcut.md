@@ -1,7 +1,7 @@
 --- 
 date: 2020-08-26 00:00:00
 category: manjaro
-tags: Manjaro, Linux, Flameshot
+tags: Manjaro- Linux- Flameshot
 ---
 # Flameshot with Printscreen Shortcut on Manjaro
 

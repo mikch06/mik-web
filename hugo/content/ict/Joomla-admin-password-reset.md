@@ -1,7 +1,7 @@
 --- 
 date: 2015-09-08 00:00:00
 category: joomla
-tags: Joomla, password reset
+tags: Joomla- password reset
 ---
 #Joomla! Admin Passwort reset
 
@@ -23,11 +23,11 @@ Please don't forget to change the password by the user administration.
 Take the easy way by an SQL-script:
 
     INSERT INTO _users`
-    (`name`, `username`, `password`, `params`)
-    VALUES ('tempadmin', 'tempadmin',
-    '433903e0a9d6a712e00251e44d29bf87:UJ0b9J5fufL3FKfCc0TLsYJBh2PFULvT', '');
-    INSERT INTO `_user_usergroup_map` (`user_id`,`group_id`)
-    VALUES (LAST_INSERT_ID(),'8');
+    (`name`- `username`- `password`- `params`)
+    VALUES ('tempadmin'- 'tempadmin'-
+    '433903e0a9d6a712e00251e44d29bf87:UJ0b9J5fufL3FKfCc0TLsYJBh2PFULvT'- '');
+    INSERT INTO `_user_usergroup_map` (`user_id`-`group_id`)
+    VALUES (LAST_INSERT_ID()-'8');
 
 Please be careful with da table prefix!
 <br><br>

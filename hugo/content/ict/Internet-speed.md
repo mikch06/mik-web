@@ -1,7 +1,7 @@
 --- 
 date: 2020-06-19 00:00:00
 category: Internet
-tags: Internet, Speedtest, init7
+tags: Internet- Speedtest- init7
 ---
 #  Speedtest
 

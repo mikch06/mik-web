@@ -1,7 +1,7 @@
 --- 
 date: 2015-10-08 00:00:00
 category: virtualbox
-tags: VirtualBox,vdisk
+tags: VirtualBox-vdisk
 ---
 # VirtualBox Enlarge virtual disk
 

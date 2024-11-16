@@ -1,7 +1,10 @@
 --- 
 date: 2019-12-12 00:00:00
 category: apu
-tags: apu, pcengines, coreboot
+tags: 
+- apu
+- pcengines
+- coreboot
 ---
 
 # apu coreboot update
@@ -37,7 +40,7 @@ e.g.
 Install
 <pre>flashrom -w /tmp/apu2_v4.11.0.1.rom -p internal</pre>
 *Output*
-<pre>flashrom -w apu3_v4.11.0.1.rom -p internal flashrom v1.0.1 on Linux 3.10.0-957.27.2.el7.x86_64 (x86_64) flashrom is free software,<br>get the source code at https://flashrom.org Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns). coreboot table found <br>at 0xdffae000. Found chipset "AMD FCH". Enabling flash write... OK. Found Winbond flash chip "W25Q64.V" (8192 kB, SPI) mapped at <br>physical address 0x00000000ff800000. This coreboot image (PC Engines:apu3) does not appear to be correct for the detected mainboard 
+<pre>flashrom -w apu3_v4.11.0.1.rom -p internal flashrom v1.0.1 on Linux 3.10.0-957.27.2.el7.x86_64 (x86_64) flashrom is free software-<br>get the source code at https://flashrom.org Using clock_gettime for delay loops (clk_id: 1- resolution: 1ns). coreboot table found <br>at 0xdffae000. Found chipset "AMD FCH". Enabling flash write... OK. Found Winbond flash chip "W25Q64.V" (8192 kB- SPI) mapped at <br>physical address 0x00000000ff800000. This coreboot image (PC Engines:apu3) does not appear to be correct for the detected mainboard 
     (PC Engines:PCEngines apu3). Aborting. You can override this with -p internal:boardmismatch=force.</pre>
 
 bash

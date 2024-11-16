@@ -1,7 +1,12 @@
 --- 
 date: 2020-07-07 00:00:00
 category: centos
-tags: xfs_growfs, lvextend, cryptsetup, luks, dm_crypt
+tags: 
+- xfs_growfs
+- lvextend
+- cryptsetup
+- luks
+- dm_crypt
 ---
 
 # CentOS Cryptsetup luks / dm_crypt
@@ -14,7 +19,7 @@ modprobe dm_crypt
 
 lsmod |grep dm_crypt
 dm_crypt               27346  0
-dm_mod                124461  11 dm_log,dm_mirror,dm_crypt
+dm_mod                124461  11 dm_log-dm_mirror-dm_crypt
 (checks crypt enabling)
 </pre>
 Cryptsetup:

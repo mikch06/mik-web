@@ -1,7 +1,7 @@
 --- 
 date: 2015-09-08 00:00:00
 category: MySQL
-tags: centos, mariadb, mysql, user, shell
+tags: centos- mariadb- mysql- user- shell
 ---
 # MySQL Create new MySQL user by shell
 
@@ -9,7 +9,7 @@ Set a new user with access from a remote host:
 
     CREATE USER 'DummyUser1'@'localhost' IDENTIFIED BY 'PASSWORD';
     CREATE USER 'DummyUser2'@'%' IDENTIFIED BY 'PASSWORD';
-Grant access to the users on both databses (DummyDB1, DummyDB2):
+Grant access to the users on both databses (DummyDB1- DummyDB2):
     
     CREATE USER 'DummyUser1'@'localhost' IDENTIFIED BY 'PASSWORD';
     CREATE USER 'DummyUser2'@'%' IDENTIFIED BY 'PASSWORD';</pre>

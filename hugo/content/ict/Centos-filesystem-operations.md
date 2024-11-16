@@ -1,10 +1,17 @@
 --- 
 date: 2020-07-02 00:00:00
 category: centos
-tags: logical volume, lvresize, xfs, lvm, physical volume, pvresize, xfs_growfs
+tags: 
+- logical volume
+- lvresize
+- xfs
+- lvm
+- physical volume
+- pvresize
+- xfs_growfs
 ---
 
-# Filesystem operations (rescan, create, resize, xfs)
+# Filesystem operations (rescan- create- resize- xfs)
 
 ### Disks</h3>
 Rescan existing disks:

@@ -1,7 +1,7 @@
 --- 
 date: 2017-04-22 00:00:00
 category: centos
-tags: centos, linux
+tags: centos- linux
 ---
 # CentOS Postfix Configuration
 
@@ -21,7 +21,7 @@ Edit the following lines in the postfix main config:
     inet_interfaces = all
     inet_interfaces = localhost
     inet_protocols = ipv4
-    mydestination = $myhostname, localhost.$mydomain, localhost
+    mydestination = $myhostname- localhost.$mydomain- localhost
     mynetworks_style = host
     relayhost = <STMP.HOST.ADDRESS>:<PORT>
     smtpd_sasl_auth_enable = yes

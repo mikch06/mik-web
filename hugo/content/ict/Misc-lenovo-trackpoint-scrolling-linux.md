@@ -1,7 +1,7 @@
 --- 
 date: 2016-07-22 00:00:00
 category: linux
-tags: Lenovo, Thinkpad, Trackpoint, Scrolling
+tags: Lenovo- Thinkpad- Trackpoint- Scrolling
 ---
 # Lenovo Thinkpad Trackpoint Scrolling on Linux (debian derivatives)
 

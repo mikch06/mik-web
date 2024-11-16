@@ -1,7 +1,7 @@
 --- 
 date: 2015-09-03 00:00:00
 category: synology
-tags: Synology, IP block
+tags: Synology- IP block
 ---
 # How to clear blocked IP list
 

@@ -1,7 +1,7 @@
 --- 
 date: 2020-07-08 00:00:00
 category: linux
-tags: centos, linux, partitioning, fdisk
+tags: centos- linux- partitioning- fdisk
 ---
 # CentOS New Partition on existing disk
 
@@ -12,13 +12,13 @@ tags: centos, linux, partitioning, fdisk
     fdisk /dev/sda
     Welcome to fdisk (util-linux 2.23.2).
      
-    Changes will remain in memory only, until you decide to write them.
+    Changes will remain in memory only- until you decide to write them.
     Be careful before using the write command.
      
      
     Command (m for help): p
      
-    Disk /dev/sda: 322.1 GB, 322122547200 bytes, 629145600 sectors
+    Disk /dev/sda: 322.1 GB- 322122547200 bytes- 629145600 sectors
     Units = sectors of 1 * 512 = 512 bytes
     Sector size (logical/physical): 512 bytes / 512 bytes
     I/O size (minimum/optimal): 512 bytes / 512 bytes
@@ -32,19 +32,19 @@ tags: centos, linux, partitioning, fdisk
      
     Command (m for help): n
     Partition type:
-       p   primary (2 primary, 0 extended, 2 free)
+       p   primary (2 primary- 0 extended- 2 free)
        e   extended
     Select (default p):
     Using default response p
-    Partition number (3,4, default 3):
-    First sector (16777216-629145599, default 16777216):
+    Partition number (3-4- default 3):
+    First sector (16777216-629145599- default 16777216):
     Using default value 16777216
-    Last sector, +sectors or +size{K,M,G} (16777216-629145599, default 629145599):
+    Last sector- +sectors or +size{K-M-G} (16777216-629145599- default 629145599):
     Using default value 629145599
     Partition 3 of type Linux and of size 292 GiB is set
      
     Command (m for help): t
-    Partition number (1-3, default 3):
+    Partition number (1-3- default 3):
     Hex code (type L to list all codes): L
      
      0  Empty           24  NEC DOS         81  Minix / old Lin bf  Solaris

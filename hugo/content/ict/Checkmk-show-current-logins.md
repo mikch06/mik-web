@@ -1,17 +1,17 @@
 --- 
 date: 2020-06-16 00:00:00
 category: checkmk
-tags: checkmk, plugins
+tags: checkmk- plugins
 ---
 # Checkmk: Show current logins
 
 ### Linux
     #!/bin/bash
     # Check who's online
-    # mki, 2020.06.16
+    # mki- 2020.06.16
     
     SERVICE="Current_Logins"
-    WHO=$( who |awk {' printf "%s ", $1'} )
+    WHO=$( who |awk {' printf "%s "- $1'} )
     CHECK=$( who |wc -l)
     
     if [ $CHECK == 0 ]
@@ -28,7 +28,7 @@ tags: checkmk, plugins
 Path on Windows: C:\ProgramData\checkmk\agent\local\current_logins.ps1
 
     #################################################################
-    # mki, 2020.06.30
+    # mki- 2020.06.30
     # fork of cmk ms-logins plugin 
     # https://exchange.checkmk.com/p/ms-logins
     #################################################################
@@ -36,13 +36,13 @@ Path on Windows: C:\ProgramData\checkmk\agent\local\current_logins.ps1
     Function Get-ComputerSessions {
     
     [cmdletbinding(
-        DefaultParameterSetName = 'session',
+        DefaultParameterSetName = 'session'-
         ConfirmImpact = 'low'
     )]
         Param(
             [Parameter(
-                Mandatory = $False,
-                Position = 0,
+                Mandatory = $False-
+                Position = 0-
                 ValueFromPipeline = $True)]
                 [string[]]$Computer
                 )
@@ -57,13 +57,13 @@ Path on Windows: C:\ProgramData\checkmk\agent\local\current_logins.ps1
             # Parse 'query session' and store in $sessions:
             $sessions = query session /server:$c
                 1..($sessions.count -1) | % {
-                    $temp = "" | Select Computer,SessionName, Username, Id, State, Type, Device
+                    $temp = "" | Select Computer-SessionName- Username- Id- State- Type- Device
                     $temp.Computer = $c
-                    $temp.SessionName = $sessions[$_].Substring(1,18).Trim()
-                    $temp.Username = $sessions[$_].Substring(19,20).Trim()
-                    $temp.Id = $sessions[$_].Substring(39,9).Trim()
-                    $temp.State = $sessions[$_].Substring(48,8).Trim()
-                    $temp.Type = $sessions[$_].Substring(56,12).Trim()
+                    $temp.SessionName = $sessions[$_].Substring(1-18).Trim()
+                    $temp.Username = $sessions[$_].Substring(19-20).Trim()
+                    $temp.Id = $sessions[$_].Substring(39-9).Trim()
+                    $temp.State = $sessions[$_].Substring(48-8).Trim()
+                    $temp.Type = $sessions[$_].Substring(56-12).Trim()
                     $temp.Device = $sessions[$_].Substring(68).Trim()
                     $report += $temp
                 }
@@ -74,7 +74,7 @@ Path on Windows: C:\ProgramData\checkmk\agent\local\current_logins.ps1
         }
     }
     
-    $User_Sessions = Get-ComputerSessions | select Username, State | Where-Object {$_.username -ne ""}
+    $User_Sessions = Get-ComputerSessions | select Username- State | Where-Object {$_.username -ne ""}
     $ActiveSessions = 0
     $ActiveUsers =""
     

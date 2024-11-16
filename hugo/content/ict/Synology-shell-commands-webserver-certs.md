@@ -1,12 +1,12 @@
 --- 
 date: 2018-01-06 00:00:00
 category: Synology
-tags: Synology,certs,tls
+tags: Synology-certs-tls
 ---
 # Synology certificates
 
 Is it possible to change certificates for the file stations and synology ui by shell?<br><br>
-Yes, it is.<br><br>
+Yes- it is.<br><br>
 You can find and replace the certs here:
 <pre>/usr/syno/etc/certificate/system/default</pre>
 After editing the certificates you can use the syno-cli to manipulate the services:<br><br>

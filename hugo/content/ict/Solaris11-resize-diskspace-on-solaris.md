@@ -1,7 +1,7 @@
 --- 
 date: 2015-08-15 00:00:00
 category: solaris
-tags: Solaris11,Unix,zfs
+tags: Solaris11-Unix-zfs
 ---
 # Resize Disk Space on Solaris 
 
