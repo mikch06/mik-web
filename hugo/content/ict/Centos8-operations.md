@@ -1,7 +1,9 @@
 --- 
 date: 2020-08-17 00:00:00
 category: linux
-tags: entos- linux
+tags: 
+- centos
+- linux
 ---
 # CentOS8: Operations
 

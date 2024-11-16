@@ -1,7 +1,9 @@
 --- 
 date: 2018-01-06 00:00:00
 category: Synology
-tags: Synology-certs-tls
+tags: 
+- Synology
+- certs-tls
 ---
 # Synology certificates
 

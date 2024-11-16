@@ -1,7 +1,9 @@
 --- 
 date: 2020-06-16 00:00:00
 category: checkmk
-tags: checkmk- plugins
+tags: 
+- checkmk
+- plugins
 ---
 # Checkmk: Show current logins
 

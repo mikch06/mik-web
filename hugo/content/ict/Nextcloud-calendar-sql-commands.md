@@ -1,7 +1,8 @@
 --- 
 date: 2020-09-03 00:00:00
 category: nextcloud
-tags: Nextcloud
+tags: 
+- Nextcloud
 ---
 # Nextcloud calendar SQL commands
 

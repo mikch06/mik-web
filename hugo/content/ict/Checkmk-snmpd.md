@@ -1,7 +1,8 @@
 --- 
 date: 2021-04-28 00:00:00
 category: checkmk
-tags: checkmk
+tags: 
+- checkmk
 ---
 # Checkmk snmp commands
 

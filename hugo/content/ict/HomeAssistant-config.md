@@ -1,7 +1,8 @@
 --- 
 date: 2023-02-01 00:00:00
 category: homeassistant
-tags: homeassistant
+tags: 
+- homeassistant
 ---
 #  Homeassistant config
 

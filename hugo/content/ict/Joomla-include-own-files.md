@@ -1,7 +1,8 @@
 --- 
 date: 2015-09-24 00:00:00
 category: joomla
-tags: Joomla
+tags: 
+- Joomla
 ---
 # Integrate own files in Joomla
 

@@ -1,7 +1,9 @@
 --- 
 date: 2017-04-22 00:00:00
 category: centos
-tags: centos- linux
+tags: 
+- centos
+- linux
 ---
 # CentOS Postfix Configuration
 

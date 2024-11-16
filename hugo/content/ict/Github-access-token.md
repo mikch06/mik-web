@@ -1,7 +1,8 @@
 --- 
 date: 2022-10-26 00:00:00
 category: linux
-tags: github
+tags: 
+- github
 ---
 # Github access tokens
 
