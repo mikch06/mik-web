@@ -6,8 +6,13 @@ theme = 'mainroad'
 enableEmoji = true
 
 [Params]
-  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
+  post_meta = ["date", "categories", "translations"] # Order of post meta information
+  readmore = true # Show "Read more" button in list if true
+  toc = true # Enable Table of Contents
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
-  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  widgets = ["recent", "categories", "taglist", "social", "languages"]
+
+[markup.goldmark.renderer]
+unsafe= true
