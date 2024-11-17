@@ -1,10 +1,9 @@
 --- 
-title: Homepage - Startseite
+title: Home
 date: 2024-10-30T21:45:42+01:00
 ---
-Home
 
-Search
+Search the docs!
 <link href="pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
