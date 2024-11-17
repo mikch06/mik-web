@@ -1,4 +1,5 @@
 --- 
+title: Checkmk local script
 date: 2024-03-15 00:00:00
 category: checkmk
 tags: 
@@ -6,9 +7,6 @@ tags:
 - linux
 - monitoring
 ---
-
-test
-
 Checkmk local script:
 
 Read out data from an rrd file and show the values e.g. bandwith up- and downstream:
