@@ -12,3 +12,7 @@ Search the docs!
         new PagefindUI({ element: "#search", showSubResults: true });
     });
 </script>
+
+<script>
+document.write("last edit:" + " " +document.lastModified);
+</script>
