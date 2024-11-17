@@ -12,7 +12,7 @@ enableEmoji = true
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
-  widgets = ["recent", "categories", "taglist", "social", "languages"]
+  widgets = ["recent", "categories", "taglist"]
 
 [markup.goldmark.renderer]
 unsafe= true
