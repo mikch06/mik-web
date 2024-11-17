@@ -4,3 +4,7 @@ title = 'ICT pages'
 theme = 'mainroad'
 
 enableEmoji = true
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
