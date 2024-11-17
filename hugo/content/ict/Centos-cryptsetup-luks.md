@@ -1,6 +1,6 @@
 --- 
 date: 2020-07-07 00:00:00
-category: centos
+# categories: \n - centos
 tags: 
 - xfs_growfs
 - lvextend

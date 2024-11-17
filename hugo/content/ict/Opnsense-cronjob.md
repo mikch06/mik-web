@@ -1,6 +1,7 @@
 --- 
 date: 2022-05-10 00:00:00
-category: opnsense
+categories: 
+- opnsense
 tags: 
 - opnsense
 - cron

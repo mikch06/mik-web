@@ -1,6 +1,7 @@
 --- 
 date: 2020-04-05 00:00:00
-category: nginx
+categories: 
+- nginx
 tags: 
 - nginx
 - Basic Auth

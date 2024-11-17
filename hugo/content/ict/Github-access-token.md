@@ -1,6 +1,6 @@
 --- 
 date: 2022-10-26 00:00:00
-category: linux
+# categories: linux
 tags: 
 - github
 ---

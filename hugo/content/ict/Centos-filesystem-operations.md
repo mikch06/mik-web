@@ -1,6 +1,7 @@
 --- 
 date: 2020-07-02 00:00:00
-category: centos
+categories: 
+- centos
 tags: 
 - logical volume
 - lvresize

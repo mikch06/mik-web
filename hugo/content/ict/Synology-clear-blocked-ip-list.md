@@ -1,6 +1,7 @@
 --- 
 date: 2015-09-03 00:00:00
-category: synology
+categories:
+- synology
 tags: 
 - Synology
 - IP block

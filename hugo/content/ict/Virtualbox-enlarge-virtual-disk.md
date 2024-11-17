@@ -1,6 +1,7 @@
 --- 
 date: 2015-10-08 00:00:00
-category: virtualbox
+categories: 
+- virtualbox
 tags: 
 - VirtualBox-vdisk
 ---

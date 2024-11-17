@@ -1,6 +1,6 @@
 --- 
 date: 2020-05-25 00:00:00
-category: linux
+# categories: linux
 tags: 
 - linux
 - systemd

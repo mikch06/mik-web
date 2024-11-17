@@ -1,6 +1,7 @@
 --- 
 date: 2015-12-14 00:00:00
-category: windows
+categories: 
+- windows
 tags: 
 - Windows
 - boottime

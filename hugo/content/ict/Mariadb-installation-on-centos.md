@@ -1,6 +1,6 @@
 --- 
 date: 2015-09-17 00:00:00
-category: centos
+# categories: \n - centos
 tags: 
 - centos
 - mariadb

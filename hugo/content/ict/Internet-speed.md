@@ -1,6 +1,6 @@
 --- 
 date: 2020-06-19 00:00:00
-category: Internet
+# categories: Internet
 tags: 
 - Internet
 - Speedtest

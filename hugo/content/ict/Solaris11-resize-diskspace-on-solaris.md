@@ -1,6 +1,7 @@
 --- 
 date: 2015-08-15 00:00:00
-category: solaris
+categories:
+- solaris
 tags: 
 - Solaris11
  -Unix-zfs

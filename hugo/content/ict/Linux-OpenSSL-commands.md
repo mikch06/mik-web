@@ -1,6 +1,6 @@
 --- 
 date: 2017-02-11 00:00:00
-category: linux
+# categories: linux
 tags: 
 - openssl
 - cert

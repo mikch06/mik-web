@@ -1,6 +1,6 @@
 --- 
 date: 2022-01-19 00:00:00
-category: linux
+# categories: linux
 tags: 
 - ssh
 - ssh-keygen

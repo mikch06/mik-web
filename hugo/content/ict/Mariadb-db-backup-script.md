@@ -1,6 +1,6 @@
 --- 
 date: 2010-09-07 00:00:00
-category: MariaDB
+# categories: MariaDB
 tags: 
 - mariadb
 - mysql

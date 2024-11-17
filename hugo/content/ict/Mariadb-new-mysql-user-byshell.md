@@ -1,6 +1,6 @@
 --- 
 date: 2015-09-08 00:00:00
-category: MySQL
+# categories: MySQL
 tags: 
 - centos
 - mariadb

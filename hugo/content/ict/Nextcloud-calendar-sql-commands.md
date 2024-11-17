@@ -1,6 +1,7 @@
 --- 
 date: 2020-09-03 00:00:00
-category: nextcloud
+categories: 
+- nextcloud
 tags: 
 - Nextcloud
 ---

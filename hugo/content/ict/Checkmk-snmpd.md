@@ -1,6 +1,6 @@
 --- 
 date: 2021-04-28 00:00:00
-category: checkmk
+# categories: checkmk
 tags: 
 - checkmk
 ---

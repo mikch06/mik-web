@@ -1,6 +1,6 @@
 --- 
 date: 2015-12-23 00:00:00
-category: centos
+# categories: \n - centos
 tags: 
 - CentOS
 - Linux

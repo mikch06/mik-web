@@ -1,6 +1,6 @@
 --- 
 date: 2020-07-15 00:00:00
-category: linux
+# categories: linux
 tags: 
 - linux
 - socks5

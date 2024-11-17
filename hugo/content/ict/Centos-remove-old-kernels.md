@@ -1,6 +1,6 @@
 --- 
 date: 2020-03-24 00:00:00
-category: centos
+# categories: \n - centos
 tags: 
 - centos
 - linux

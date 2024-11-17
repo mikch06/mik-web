@@ -1,6 +1,7 @@
 --- 
 date: 2015-01-01 00:00:00
-category: linux
+categories: 
+- linux
 tags: 
 ---
 # Linux Desktop with Apple Keyboard

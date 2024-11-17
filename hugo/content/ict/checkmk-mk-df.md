@@ -1,6 +1,7 @@
 --- 
 date: 2023-05-09 00:00:00
-category: checkmk
+categories:
+- checkmk
 tags: 
 - checkmk
 - plugins

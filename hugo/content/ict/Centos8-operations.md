@@ -1,6 +1,6 @@
 --- 
 date: 2020-08-17 00:00:00
-category: linux
+# categories: linux
 tags: 
 - centos
 - linux

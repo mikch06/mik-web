@@ -1,6 +1,7 @@
 --- 
 date: 2016-07-22 00:00:00
-category: linux
+categories: 
+- linux
 tags: 
 - Lenovo
 - Thinkpad

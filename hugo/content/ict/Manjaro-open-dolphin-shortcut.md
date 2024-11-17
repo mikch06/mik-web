@@ -1,6 +1,6 @@
 --- 
 date: 2019-09-23 00:00:00
-category: manjaro
+# categories: manjaro
 tags: 
 - Manjaro
 - centos 

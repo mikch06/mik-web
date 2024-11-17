@@ -1,6 +1,6 @@
 --- 
 date: 2015-09-24 00:00:00
-category: joomla
+# categories: joomla
 tags: 
 - Joomla
 ---

@@ -1,6 +1,6 @@
 --- 
 date: 2020-07-17 00:00:00
-category: opnsense
+# categories: opnsense
 tags: 
 - Init7
 - Hybrid7

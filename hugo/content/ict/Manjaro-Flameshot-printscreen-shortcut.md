@@ -1,6 +1,6 @@
 --- 
 date: 2020-08-26 00:00:00
-category: manjaro
+# categories: manjaro
 tags: 
 - Manjaro
 - Linux
