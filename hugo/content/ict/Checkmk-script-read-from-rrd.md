@@ -1,7 +1,8 @@
 --- 
 title: Checkmk local script
 date: 2024-03-15 00:00:00
-category: checkmk
+categories: 
+- checkmk
 tags: 
 - checkmk
 - linux
