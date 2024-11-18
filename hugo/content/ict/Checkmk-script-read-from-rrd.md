@@ -1,6 +1,7 @@
 --- 
 title: Checkmk local script
 date: 2024-03-15 00:00:00
+lastmod: 2024-11-18
 categories: 
 - checkmk
 tags: 
