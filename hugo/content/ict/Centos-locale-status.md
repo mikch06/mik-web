@@ -1,15 +1,14 @@
 --- 
 date: 2015-09-09 00:00:00
-# categories: \n - centos
+title: status / set-locale
+categories:
+- centos
 tags: 
 - centos
 - linux
 - locale
 - locale-status
 ---
-#  status / set-locale
-
-
 Show and edit locale status on CentOS:
 
 Show locale status:

@@ -1,5 +1,6 @@
 --- 
-date: 2015-09-08 00:00:00
+date: 2015-09-08 00:00
+title: "Change hostname"
 categories: 
 - centos
 tags: 
@@ -7,8 +8,6 @@ tags:
 - linux
 - hostnamectl
 ---
-
-# Change hostname
 
 With CentOS7 Release hostnames must be changed by 'hostnamectl':
 

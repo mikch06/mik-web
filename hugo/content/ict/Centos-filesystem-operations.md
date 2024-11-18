@@ -1,5 +1,6 @@
 --- 
 date: 2020-07-02 00:00:00
+title: "Filesystem operations (rescan- create- resize- xfs)"
 categories: 
 - centos
 tags: 
@@ -11,8 +12,6 @@ tags:
 - pvresize
 - xfs_growfs
 ---
-
-# Filesystem operations (rescan- create- resize- xfs)
 
 ### Disks</h3>
 Rescan existing disks:

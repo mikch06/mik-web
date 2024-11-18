@@ -1,22 +1,21 @@
 --- 
 date: 2019-12-12 00:00:00
+title: "apu coreboot update"
 categories: 
 - apu
-tags: 
+tags:
 - apu
 - pcengines
 - coreboot
 ---
 
-# apu coreboot update
-
-###Links
+### Links
 - Home: <a href="https://www.pcengines.ch">pcengines.ch</a><br>
 - CH Shop: <a href="https://www.pcengines.ch/newshop.php?c=48881">https://www.pcengines.ch/newshop.php?c=48881</a><br>
 - Howto: <a href="https://pcengines.ch/howto.htm">https://pcengines.ch/howto.htm</a><br>
 - Github rom releases: <a href="https://pcengines.github.io">https://pcengines.github.io</a><br>
 
-###Update coreboot rom
+### Update coreboot rom
 Install flushrom on your device:<br>
 
 for CentOS

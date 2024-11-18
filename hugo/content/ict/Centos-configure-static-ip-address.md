@@ -1,13 +1,13 @@
 --- 
 date: 2015-09-09 00:00:00
-# categories: \n - centos
+title: Configure static IP address
+categories: 
+- centos
 tags: 
 - centos
 - linux
 - ipaddr
 ---
-
-# Configure static IP address
 
 Position of the interface configuration files:
 

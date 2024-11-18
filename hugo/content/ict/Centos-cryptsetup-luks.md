@@ -1,6 +1,8 @@
 --- 
 date: 2020-07-07 00:00:00
-# categories: \n - centos
+title: CentOS Cryptsetup luks / dm_crypt
+categories:
+- centos
 tags: 
 - xfs_growfs
 - lvextend
@@ -8,8 +10,6 @@ tags:
 - luks
 - dm_crypt
 ---
-
-# CentOS Cryptsetup luks / dm_crypt
 
 Preparation:
 <pre>yum -y install cryptsetup
