@@ -14,5 +14,5 @@ Search the docs!
 </script>
 
 <script>
-document.write("last edit:" + " " +document.lastModified);
+document.write("<br>Last generation date:" + " " +document.lastModified);
 </script>
