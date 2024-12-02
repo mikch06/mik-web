@@ -8,21 +8,24 @@ tags:
 - checkmk
 - linux
 - monitoring
+- localcheck
 ---
 Checkmk local script:
 
-Read out data from an rrd file and show the values e.g. bandwith up- and downstream:
+    # /usr/lib/check_mk_agent/local/check_podman.sh
+	#!/bin/bash
+	# Podman check
+	# mik, 2024.11.29
 
-    # /usr/lib/check_mk_agent/local
+	# Podman user
+	puser=admin
 
-    #!/bin/bash
-    # set -x
-  
-    workdir='/opt/iperfmon'
-    #get data for altoo_office
-    downstream=$(/usr/bin/rrdtool lastupdate $workdir/iperfmon.rrd |tail -1|awk '{ print $2}')
-    upstream=$(/usr/bin/rrdtool lastupdate $workdir/iperfmon.rrd |tail -1|awk '{ print $3}')
-    
-    echo "0 Iperfmon downstream=$downstream|upstream=$upstream Iperf up- and downstream: $upstream | $downstream (MBit/s)"
-    
-    #echo "0 My service myvalue=73 My output text which may contain spaces"
+	# Container overview
+	ncont=$(su - $puser -c "podman info|grep -A 4 containerStore"|head -2|tail -1|awk {'print $2'})
+	rcont=$(su - $puser -c "podman info|grep -A 4 containerStore"|head -4|tail -1|awk {'print $2'})
+	scont=$(su - $puser -c "podman info|grep -A 4 containerStore"|head -5|tail -1|awk {'print $2'})
+
+	# Checks: Images, Containers, Volumes
+	images=$(su - $puser -c "podman system df"|head -2|tail -1|awk {'print $4'})
+	containers=$(su - $puser -c "podman system df"|head -3|tail -1|awk {'print $4'})
+	volumes=$(su - $puser -c "podman system df"|head -3|tail -1|awk {'print $5'})
