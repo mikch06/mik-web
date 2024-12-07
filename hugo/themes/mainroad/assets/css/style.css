@@ -445,7 +445,7 @@ select {
 .divider {
 	height: 5px;
 	margin: 0;
-	background: {{ $highlightColor }};
+	background: #09c;
 	border: 0;
 }
 
