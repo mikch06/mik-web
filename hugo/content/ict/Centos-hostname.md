@@ -1,5 +1,5 @@
 --- 
-date: 2015-09-08 00:00
+date: 2015-09-08
 title: "Change hostname"
 categories: 
 - centos
