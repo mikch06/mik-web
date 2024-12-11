@@ -7,8 +7,6 @@ tags:
 - checkmk
 - plugins
 ---
-# Checkmk: Show current logins
-
 ### Linux
     #!/bin/bash
     # Check who's online

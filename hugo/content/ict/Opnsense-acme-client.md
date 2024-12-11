@@ -7,8 +7,6 @@ tags:
 - opnsense
 - certs
 ---
-# Opnsense acme-client
-
 ## Acme client- let's encrypt
 
 ### Issue new cert in opnsense UI
