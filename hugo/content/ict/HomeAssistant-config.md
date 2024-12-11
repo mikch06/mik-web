@@ -1,11 +1,11 @@
 --- 
 date: 2023-02-01 00:00:00
-# categories: homeassistant
+title: Homeassistant config
+categories: 
+- homeassistant
 tags: 
 - homeassistant
 ---
-#  Homeassistant config
-
 # Add-ons
 ## deConz add-on
 deConz -> config

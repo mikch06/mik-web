@@ -1,11 +1,11 @@
 --- 
 date: 2022-10-26 00:00:00
-# categories: linux
+title: Github access tokens
+categories: 
+- linux
 tags: 
 - github
 ---
-# Github access tokens
-
 Repo usage with username and password on github is deprecated.
 
 Use Personal access tokens: <https://github.com/settings/tokens>
