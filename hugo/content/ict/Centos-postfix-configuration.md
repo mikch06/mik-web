@@ -1,12 +1,12 @@
 --- 
 date: 2017-04-22 00:00:00
-# categories: \n - centos
+title: "CentOS Postfix Configuration"
+categories: 
+- centos
 tags: 
 - centos
 - linux
 ---
-# CentOS Postfix Configuration
-
 Scenario: Homeserver should send e-mails by your ISP-hosted domain:
 
 Packages:

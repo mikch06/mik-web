@@ -1,12 +1,12 @@
 --- 
 date: 2020-03-24 00:00:00
-# categories: \n - centos
+title: "Remove old kernels"
+categories: 
+- centos
 tags: 
 - centos
 - linux
 ---
-# Remove old kernels
-
 Current running kernel
 
     uname -an

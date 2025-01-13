@@ -1,14 +1,14 @@
 --- 
 date: 2020-07-08 00:00:00
-# categories: linux
+title: "CentOS New Partition on existing disk"
+categories: 
+- linux
 tags: 
 - centos
 - linux
 - partitioning
 - fdisk
 ---
-# CentOS New Partition on existing disk
-
 ### Partitioning
 
     fdisk -l
