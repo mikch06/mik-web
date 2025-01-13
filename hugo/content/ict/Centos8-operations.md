@@ -1,11 +1,12 @@
 --- 
 date: 2020-08-17 00:00:00
-# categories: linux
+title: "CentOS8: Operations"
+categories:
+- linux
 tags: 
 - centos
 - linux
 ---
-# CentOS8: Operations
 
 ***
 ### Restart Networking:

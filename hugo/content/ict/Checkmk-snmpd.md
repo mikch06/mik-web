@@ -1,7 +1,8 @@
 --- 
 date: 2021-04-28 00:00:00
 title: Checkmk snmp commands
-# categories: checkmk
+categories: 
+- checkmk
 tags: 
 - checkmk
 ---

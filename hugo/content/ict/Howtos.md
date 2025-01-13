@@ -1,12 +1,11 @@
 --- 
 date: 2020-01-01 00:00:00
+title: "Howto-Collection"
 tags:
 - Howtos
-# categories:
+categories:
 - howtos
 ---
-# Howto-Collection
-
 ### Disks & Filesystems
 
 <li><a href="https://kerneltalks.com/disk-management/how-to-rescan-disk-in-linux-after-extending-vmware-disk/" target="_blank">How to rescan disk in Linux after extending v

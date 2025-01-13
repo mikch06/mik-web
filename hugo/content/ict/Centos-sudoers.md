@@ -1,12 +1,13 @@
 --- 
 date: 2015-12-23 00:00:00
-# categories: \n - centos
+title: Sudoers
+categories: 
+- centos
 tags: 
 - CentOS
 - Linux
 - sudo
 ---
-# Sudoers
 
 To give a user rights on a root privileged command:
     

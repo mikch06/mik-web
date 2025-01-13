@@ -1,12 +1,13 @@
 ---
 date: 2020-06-03 00:00:00
-# categories: \n - centos
+title: "Disable ipv6 on CentOS8"
+categories: 
+- centos
 tags: 
 - CentOS
 - Linux
 - ipv6
 ---
-# Disable ipv6 on CentOS8
 
 Disable ipv6 on CentOS8:
         
