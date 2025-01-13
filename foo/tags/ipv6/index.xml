@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ipv6 on ICT pages</title>
+    <link>https://example.org/tags/ipv6/</link>
+    <description>Recent content in Ipv6 on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/ipv6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/centos8-disable-ipv6/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/centos8-disable-ipv6/</guid>
+      <description>&lt;h1 id=&#34;disable-ipv6-on-centos8&#34;&gt;Disable ipv6 on CentOS8&lt;/h1&gt;&#xA;&lt;p&gt;Disable ipv6 on CentOS8:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;# vi /etc/sysctl.conf&#xA;&#xA;net.ipv6.conf.all.disable_ipv6 = 1&#xA;net.ipv6.conf.default.disable_ipv6 = 1&#xA;&#xA;&#xA;sysctl -p&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

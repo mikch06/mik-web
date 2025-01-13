@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Foxyproxy - ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/tags/foxyproxy/index.xml" title="ICT pages">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Foxyproxy</h1>
+	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/linux-socks-proxy-know-how/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-15T00:00:00Z">July 15, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="socks5-proxy-know-how">SOCKS(5) Proxy Know How</h1>
+<h3>SOCKS Proxy with Putty and FoxyProxy:</h3>
+![](https://kissel.ch/ict/images/putty-socks5-config1.png)
+![](https://kissel.ch/ict/images/putty-socks5-config2.png)
+<br>
+<br>
+Define your free proxy Port (2409)
+<br><br>
+![](https://kissel.ch/ict/images/foxyproxy-config.png)
+<br>
+After enabling FoxyProxy you're able to connect your home by ssh and browse local services.
+<hr>
+SOCKS Proxy tunnel by shell:
+<pre>ssh -L 2409:localhost:2409 'user'@'host'
+on cyon host:
+ssh -D 2409 'user'@'host'</pre>
+SOCKS Proxy tunnel over another hop:
+<pre>
+connection to 1. host:
+ssh -L 2409:localhost:2409 user@1host.ch
+<p>connection on 1. to 2. host:
+ssh -D 2409 <a href="mailto:user@2host.ch">user@2host.ch</a></p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/ict/linux-socks-proxy-know-how/">Read more…</a>
+	</div>
+</article>
+</main>
+
+
+			</div>
+			
+
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Locale-Status on ICT pages</title>
+    <link>https://example.org/tags/locale-status/</link>
+    <description>Recent content in Locale-Status on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/locale-status/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>status / set-locale</title>
+      <link>https://example.org/ict/centos-locale-status/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/centos-locale-status/</guid>
+      <description>&lt;p&gt;Show and edit locale status on CentOS:&lt;/p&gt;&#xA;&lt;p&gt;Show locale status:&lt;/p&gt;&#xA;&lt;pre&gt;[root@host]# localectl status&#xA;System Locale: LANG=de_DE.UTF-8&#xA;VC Keymap: sg&#xA;X11 Layout: ch&#xA;Show all possible locaels:&#xA;localectl list-locales&#xA;&lt;/pre&gt;&#xA;&lt;p&gt;Setzen der neuen locale:&lt;/p&gt;&#xA;&lt;pre&gt;localectl set-locale LANG=&#34;locale name&#34;&#xA;locale&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

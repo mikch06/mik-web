@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solaris11 -Unix-Zfs on ICT pages</title>
+    <link>https://example.org/tags/solaris11--unix-zfs/</link>
+    <description>Recent content in Solaris11 -Unix-Zfs on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/solaris11--unix-zfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/solaris11-resize-diskspace-on-solaris/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/solaris11-resize-diskspace-on-solaris/</guid>
+      <description>&lt;h1 id=&#34;resize-disk-space-on-solaris&#34;&gt;Resize Disk Space on Solaris&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;format -e&#xA;# growfs -M /mount-point /dev/md/rdsk/volumename&#xA;# growfs -M /home2 /dev/md/rdsk/d10&#xA;zfs set volsize=5G rpool/swap&#xA;swap -a /dev/zvol/dsk/rpool/swap&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basic Auth on ICT pages</title>
+    <link>https://example.org/tags/basic-auth/</link>
+    <description>Recent content in Basic Auth on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/basic-auth/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/nginx-basic-auth-config/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/nginx-basic-auth-config/</guid>
+      <description>&lt;h1 id=&#34;nginx-basic-auth-config&#34;&gt;Nginx Basic Auth config&lt;/h1&gt;&#xA;&lt;p&gt;Configure location:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;    location / {&#xA;    auth_basic &amp;quot;closed site&amp;quot;;&#xA;    auth_basic_user_file htpasswd;&#xA;    }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Create password file:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;yum install httpd-tools&amp;lt;/pre&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;New file:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;htpasswd -c htpasswd-file &amp;quot;username&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;New password:&lt;/p&gt;&#xA;&lt;p&gt;Append user to existing file:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;htpasswd htpasswd-file &amp;quot;username&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

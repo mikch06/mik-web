@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internet on ICT pages</title>
+    <link>https://example.org/tags/internet/</link>
+    <description>Recent content in Internet on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/internet-speed/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/internet-speed/</guid>
+      <description>&lt;h1 id=&#34;speedtest&#34;&gt;Speedtest&lt;/h1&gt;&#xA;&lt;p&gt;2020.06.19&#xA;&lt;img src=&#34;https://kissel.ch/ict/images/internet_speed_200619.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

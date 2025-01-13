@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CentOS Cryptsetup luks / dm_crypt - ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">CentOS Cryptsetup luks / dm_crypt</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-07T00:00:00Z">July 07, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/centos/" rel="category">Centos</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Preparation:</p>
+<pre>yum -y install cryptsetup
+
+modprobe dm_crypt
+(enables crypt)
+
+lsmod |grep dm_crypt
+dm_crypt               27346  0
+dm_mod                124461  11 dm_log-dm_mirror-dm_crypt
+(checks crypt enabling)
+</pre>
+<p>Cryptsetup:</p>
+<pre>pvcreate /dev/sdb
+    Physical volume "/dev/sdb" successfully created.
+
+vgextend centos /dev/sdb
+    Volume group "system" successfully extended
+
+lvcreate -n lv_encrypted -L 10G system
+    Logical volume "lv_encrypted" created.</pre>
+<p>Cryptdevice:</p>
+<pre>
+cryptsetup luksFormat /dev/system/lv_encrypted
+
+cryptsetup luksOpen /dev/system/lv_encrypted encrypted
+    
+mkfs.xfs /dev/mapper/encrypted
+    
+mkdir /encrypted
+    
+mount /dev/mapper/encrypted /encrypted
+    
+# lsblk
+NAME                    MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sda                       8:0    0   10G  0 disk
+├─sda1                    8:1    0  512M  0 part  /boot
+└─sda2                    8:2    0  9.5G  0 part
+    ├─system-root         253:0    0  7.5G  0 lvm   /
+    ├─system-swap         253:1    0    2G  0 lvm   [SWAP]
+    └─system-lv_encrypted 253:2    0   10G  0 lvm
+    └─encrypted         253:3    0   10G  0 crypt /encrypted
+sdb                       8:16   0   10G  0 disk
+└─system-lv_encrypted   253:2    0   10G  0 lvm
+    └─encrypted           253:3    0   10G  0 crypt /encrypted
+sr0      
+</pre>
+<p>Increase encrypted device:<br>
+(close &amp; unmount before)</p>
+<pre>cryptsetup close encrypted
+    umount /encrypted
+    </pre>
+<p>extend:</p>
+<pre>lvextend -L +1GB /dev/system/lv_encrypted
+cryptsetup resize /dev/mapper/encrypted
+xfs_growfs /encrypted/</pre>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/xfs_growfs/" rel="tag">xfs_growfs</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/lvextend/" rel="tag">lvextend</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/cryptsetup/" rel="tag">cryptsetup</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/luks/" rel="tag">luks</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/dm_crypt/" rel="tag">dm_crypt</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

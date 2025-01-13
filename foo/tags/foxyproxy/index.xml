@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foxyproxy on ICT pages</title>
+    <link>https://example.org/tags/foxyproxy/</link>
+    <description>Recent content in Foxyproxy on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/foxyproxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/linux-socks-proxy-know-how/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/linux-socks-proxy-know-how/</guid>
+      <description>&lt;h1 id=&#34;socks5-proxy-know-how&#34;&gt;SOCKS(5) Proxy Know How&lt;/h1&gt;&#xA;&lt;h3&gt;SOCKS Proxy with Putty and FoxyProxy:&lt;/h3&gt;&#xA;![](https://kissel.ch/ict/images/putty-socks5-config1.png)&#xA;![](https://kissel.ch/ict/images/putty-socks5-config2.png)&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;Define your free proxy Port (2409)&#xA;&lt;br&gt;&lt;br&gt;&#xA;![](https://kissel.ch/ict/images/foxyproxy-config.png)&#xA;&lt;br&gt;&#xA;After enabling FoxyProxy you&#39;re able to connect your home by ssh and browse local services.&#xA;&lt;hr&gt;&#xA;SOCKS Proxy tunnel by shell:&#xA;&lt;pre&gt;ssh -L 2409:localhost:2409 &#39;user&#39;@&#39;host&#39;&#xA;on cyon host:&#xA;ssh -D 2409 &#39;user&#39;@&#39;host&#39;&lt;/pre&gt;&#xA;SOCKS Proxy tunnel over another hop:&#xA;&lt;pre&gt;&#xA;connection to 1. host:&#xA;ssh -L 2409:localhost:2409 user@1host.ch&#xA;&lt;p&gt;connection on 1. to 2. host:&#xA;ssh -D 2409 &lt;a href=&#34;mailto:user@2host.ch&#34;&gt;user@2host.ch&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

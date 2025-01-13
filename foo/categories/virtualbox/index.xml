@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtualbox on ICT pages</title>
+    <link>https://example.org/categories/virtualbox/</link>
+    <description>Recent content in Virtualbox on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/categories/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/virtualbox-knowhow/</link>
+      <pubDate>Fri, 16 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/virtualbox-knowhow/</guid>
+      <description>&lt;h1 id=&#34;virtualbox-knowhow&#34;&gt;VirtualBox KnowHow&lt;/h1&gt;&#xA;&lt;p&gt;Install Virtual Box Extension Pack:&lt;br&gt;&#xA;&lt;br&gt;&#xA;Download newest Extension Pack on Virtual Box Dwonloads and move it on your Server.&lt;/p&gt;&#xA;&lt;p&gt;Install with:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.0.4-102546.vbox-extpack&#xA;0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%&#xA;Successfully installed &amp;quot;Oracle VM VirtualBox Extension Pack&amp;quot;.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Autostart Script for phpVirtualBox with systemd:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;cd /etc/systemd/system&#xA;vi vboxwebsrv.service&#xA;&#xA;[Unit]&#xA;Description=Start vboxwebsrv.service&#xA;Before=shutdown.target reboot.target halt.target&#xA;&#xA;[Service]&#xA;Type=oneshot&#xA;ExecStart=/usr/bin/vboxwebsrv&#xA;RemainAfterExit=true&#xA;KillMode=none&#xA;&#xA;[Install]&#xA;WantedBy=multi-user.target&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;:x!&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;systemctl enable vboxwebsrv.service&#xA;systemctl start vboxwebsrv.service&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.org/ict/virtualbox-enlarge-virtual-disk/</link>
+      <pubDate>Thu, 08 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/virtualbox-enlarge-virtual-disk/</guid>
+      <description>&lt;h1 id=&#34;virtualbox-enlarge-virtual-disk&#34;&gt;VirtualBox Enlarge virtual disk&lt;/h1&gt;&#xA;&lt;p&gt;The changes have to be done direct on the console:&#xA;&lt;br&gt;&lt;/p&gt;&#xA;&lt;pre&gt;VBoxManage modifyhd &lt;VirtualDisk.vdi&gt; --resize 50000&#xA;0%..&lt;/pre&gt;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;</description>
+    </item>
+  </channel>
+</rss>

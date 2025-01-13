@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certs-Tls on ICT pages</title>
+    <link>https://example.org/tags/certs-tls/</link>
+    <description>Recent content in Certs-Tls on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/certs-tls/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/synology-shell-commands-webserver-certs/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/synology-shell-commands-webserver-certs/</guid>
+      <description>&lt;h1 id=&#34;synology-certificates&#34;&gt;Synology certificates&lt;/h1&gt;&#xA;&lt;p&gt;Is it possible to change certificates for the file stations and synology ui by shell?&lt;br&gt;&lt;br&gt;&#xA;Yes- it is.&lt;br&gt;&lt;br&gt;&#xA;You can find and replace the certs here:&lt;/p&gt;&#xA;&lt;pre&gt;/usr/syno/etc/certificate/system/default&lt;/pre&gt;&#xA;&lt;p&gt;After editing the certificates you can use the syno-cli to manipulate the services:&lt;br&gt;&lt;br&gt;&#xA;Work with the root user (careful):&lt;/p&gt;&#xA;&lt;pre&gt;# synoservice &lt;/pre&gt;&#xA;&lt;p&gt;you&amp;rsquo;ll get the help and see &amp;ndash;status&lt;/p&gt;&#xA;&lt;pre&gt;# synoservice --status&lt;/pre&gt;&#xA;&lt;p&gt;Now you have all syno services listed.&lt;br&gt;&lt;br&gt;&#xA;For restarting the webserver (nginx) you can restart the nginx service which you find in the status list:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

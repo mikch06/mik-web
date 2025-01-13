@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Template on ICT pages</title>
+    <link>https://example.org/tags/template/</link>
+    <description>Recent content in Template on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/template/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/linux-mailcheck-shell/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/linux-mailcheck-shell/</guid>
+      <description>&lt;h1 id=&#34;mailcheck-shell&#34;&gt;Mailcheck shell&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;echo &amp;quot;This is a Testmail! [mik]&amp;quot; | mail -s &amp;quot;Mailcheck - TESTMail&amp;quot; foo@test.ch&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

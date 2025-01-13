@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Synology on ICT pages</title>
+    <link>https://example.org/categories/synology/</link>
+    <description>Recent content in Synology on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/categories/synology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/synology-shell-commands-webserver-certs/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/synology-shell-commands-webserver-certs/</guid>
+      <description>&lt;h1 id=&#34;synology-certificates&#34;&gt;Synology certificates&lt;/h1&gt;&#xA;&lt;p&gt;Is it possible to change certificates for the file stations and synology ui by shell?&lt;br&gt;&lt;br&gt;&#xA;Yes- it is.&lt;br&gt;&lt;br&gt;&#xA;You can find and replace the certs here:&lt;/p&gt;&#xA;&lt;pre&gt;/usr/syno/etc/certificate/system/default&lt;/pre&gt;&#xA;&lt;p&gt;After editing the certificates you can use the syno-cli to manipulate the services:&lt;br&gt;&lt;br&gt;&#xA;Work with the root user (careful):&lt;/p&gt;&#xA;&lt;pre&gt;# synoservice &lt;/pre&gt;&#xA;&lt;p&gt;you&amp;rsquo;ll get the help and see &amp;ndash;status&lt;/p&gt;&#xA;&lt;pre&gt;# synoservice --status&lt;/pre&gt;&#xA;&lt;p&gt;Now you have all syno services listed.&lt;br&gt;&lt;br&gt;&#xA;For restarting the webserver (nginx) you can restart the nginx service which you find in the status list:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.org/ict/synology-clear-blocked-ip-list/</link>
+      <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/synology-clear-blocked-ip-list/</guid>
+      <description>&lt;h1 id=&#34;how-to-clear-blocked-ip-list&#34;&gt;How to clear blocked IP list&lt;/h1&gt;&#xA;&lt;p&gt;Login to your NAS by ssh:&lt;/p&gt;&#xA;&lt;p&gt;May take a backup from the autoblock databse:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;cp /etc/synoautoblock.db&#xA;/etc/synoautoblock.db.bak&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Change to database sqlite mode:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sqlite3 &amp;quot;Enter&amp;quot;&#xA;open the database:&#xA;sqlite&amp;gt; .open /etc/synoautoblock.db&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Show tables:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .tables&#xA;&amp;gt; AutoBlockIP&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Show all entries:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; select * from AutoBlockIP;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Delete all entries from database:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; delete from AutoBlockIP;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Show all entries again:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; select * from AutoBlockIP;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Delete a single entry:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

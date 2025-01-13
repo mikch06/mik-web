@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fstab on ICT pages</title>
+    <link>https://example.org/tags/fstab/</link>
+    <description>Recent content in Fstab on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/fstab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mount nfs share</title>
+      <link>https://example.org/ict/centos-mount-nfs-share/</link>
+      <pubDate>Mon, 07 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/centos-mount-nfs-share/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Setup NFS Client:&lt;/p&gt;&#xA;&lt;p&gt;yum -y install nfs-utils&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Create mountpoint:&lt;/p&gt;&#xA;&lt;p&gt;mkdir -p /mnt/nfs/example-share&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Mount NFS share:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;mount &amp;lt;HOST&amp;gt;:/example-share /mnt/nfs/example-share&#xA;hint: –&amp;gt; df -h&#xA;hint: –&amp;gt; mount – show all mounts&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add mount to fstab for remounting after reboot:&lt;/p&gt;&#xA;&lt;p&gt;vi /etc/fstab &lt;HOST&gt;:/example-share /mnt/nfs/&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

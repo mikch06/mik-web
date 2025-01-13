@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on ICT pages</title>
+    <link>https://example.org/tags/javascript/</link>
+    <description>Recent content in Javascript on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/javascript/</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/javascript/</guid>
+      <description>&lt;h1 id=&#34;javascripts&#34;&gt;JavaScripts&lt;/h1&gt;&#xA;&lt;h2 id=&#34;last-edit-in-html&#34;&gt;Last edit in HTML&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;&#xA;document.write(&amp;quot;last edit:&amp;quot; + &amp;quot; &amp;quot; +document.lastModified);&#xA;&amp;lt;/script&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roundcube on ICT pages</title>
+    <link>https://example.org/tags/roundcube/</link>
+    <description>Recent content in Roundcube on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/roundcube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/linux-roundcube-update/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/linux-roundcube-update/</guid>
+      <description>&lt;h1 id=&#34;roundcube-update&#34;&gt;Roundcube update&lt;/h1&gt;&#xA;&lt;p&gt;Download new roundcube version &lt;strong&gt;(complete package)&lt;/strong&gt; from &lt;a href=&#34;https://roundcube.net/download&#34;&gt;https://roundcube.net/download&lt;/a&gt; website or github:&lt;/p&gt;&#xA;&lt;pre&gt;wget https://github.com/roundcube/roundcubemail/releases/download/1.4.3/roundcubemail-1.4.3-complete.tar.gz&lt;/pre&gt;&#xA;&lt;p&gt;Unpack tar.gz package:  &lt;/p&gt;&#xA;&lt;pre&gt;gunzip roundcubemail-1.4.3-complete.tar.gz&lt;/pre&gt;&#xA;&lt;p&gt;Unpack tar package:&lt;/p&gt;&#xA;&lt;pre&gt;tar -xvf roundcubemail-1.4.3-complete.tar&lt;/pre&gt;&#xA;&lt;p&gt;Go to /bin directory:&lt;/p&gt;&#xA;&lt;pre&gt;cd roundcubemail-1.4.3/bin/&lt;/pre&gt;&#xA;&lt;p&gt;Run installto script to your install dir:&lt;/p&gt;&#xA;&lt;pre&gt;./installto.sh ../../my.roundcube.installdir&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CentOS Linux fail2ban - ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">CentOS Linux fail2ban</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2010-12-03T00:00:00Z">December 03, 2010</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/centos/" rel="category">Centos</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>On exposed systems to the internet fail2ban is used to avoid attacks e.g. on ssh deamon.
+This shows the install and config on the CentOS 7.2 release with using firewalld (preinstalled).
+First install fail2ban from repo:</p>
+<pre>yum -y install fail2ban</pre>
+<p>For own settings the main config ‘jail.conf’ could be copied.</p>
+<pre>cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local</pre>
+<p>Now you can edit ‘jail.local’ with your own fonfigurations.</p>
+<pre>[sshd] #--> uncommend to activate fail2ban for sshd
+enabled = true #--> use firewalld not iptables
+ignoreip = 192.168.2.0 #--> fail2ban ignores these ip's
+destemail =  e-mail@address.ch #--> fail2ban sends ban informations to this address
+sendername = Fail2Ban - hostname #--> hostinfos in e-mail
+usedns = no #--> don't resolve dns names</pre>
+<p>Now you can enable and start the fail2ban deamon:</p>
+<pre>systemctl enable fail2ban
+systemctl start fail2ban</pre>
+<p>To status of fail2ban and banned ip’s use:</p>
+<pre>fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:     37
+|  `- File list:        /var/log/secure
+`- Actions
+        |- Currently banned: 0
+        |- Total banned:     4
+        `- Banned IP list:</pre>
+<p>###Links:
+<a href="http://www.fail2ban.org" target="_blank"><a href="http://www.fail2ban.org">http://www.fail2ban.org</a></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/centos/" rel="tag">centos</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/fail2ban/" rel="tag">fail2ban</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

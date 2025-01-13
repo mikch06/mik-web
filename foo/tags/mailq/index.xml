@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mailq on ICT pages</title>
+    <link>https://example.org/tags/mailq/</link>
+    <description>Recent content in Mailq on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/mailq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/linux-daily-admin-commands/</link>
+      <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/linux-daily-admin-commands/</guid>
+      <description>&lt;h1 id=&#34;linux-daily-admin-commandsh2&#34;&gt;Linux Daily admin commands&lt;/h2&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Postfix:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;mailq                 # show queue&#xA;postqueue -f          # Resend all queued messages&#xA;postsuper -d ALL      # clear message queue&#xA;postcat -q            # Show message (-v)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;selinux immediately change:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;getenforce            # show selinux state&#xA;setenforce 0          # turn off selinux&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

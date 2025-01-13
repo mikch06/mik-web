@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on ICT pages</title>
+    <link>https://example.org/tags/monitoring/</link>
+    <description>Recent content in Monitoring on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Checkmk check podman containers</title>
+      <link>https://example.org/ict/checkmk-check-podman/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/checkmk-check-podman/</guid>
+      <description>&lt;p&gt;Checkmk local script:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;# /usr/lib/check_mk_agent/local/check_podman.sh&#xA;#!/bin/bash&#xA;# Podman check&#xA;# mik, 2024.11.29&#xA;&#xA;# Podman user&#xA;puser=admin&#xA;&#xA;# Container overview&#xA;ncont=$(su - $puser -c &amp;quot;podman info|grep -A 4 containerStore&amp;quot;|head -2|tail -1|awk {&#39;print $2&#39;})&#xA;rcont=$(su - $puser -c &amp;quot;podman info|grep -A 4 containerStore&amp;quot;|head -4|tail -1|awk {&#39;print $2&#39;})&#xA;scont=$(su - $puser -c &amp;quot;podman info|grep -A 4 containerStore&amp;quot;|head -5|tail -1|awk {&#39;print $2&#39;})&#xA;&#xA;# Checks: Images, Containers, Volumes&#xA;images=$(su - $puser -c &amp;quot;podman system df&amp;quot;|head -2|tail -1|awk {&#39;print $4&#39;})&#xA;containers=$(su - $puser -c &amp;quot;podman system df&amp;quot;|head -3|tail -1|awk {&#39;print $4&#39;})&#xA;volumes=$(su - $puser -c &amp;quot;podman system df&amp;quot;|head -3|tail -1|awk {&#39;print $5&#39;})&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Checkmk local script</title>
+      <link>https://example.org/ict/checkmk-script-read-from-rrd/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/checkmk-script-read-from-rrd/</guid>
+      <description>&lt;p&gt;Checkmk local script:&lt;/p&gt;&#xA;&lt;p&gt;Read out data from an rrd file and show the values e.g. bandwith up- and downstream:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;# /usr/lib/check_mk_agent/local&#xA;&#xA;#!/bin/bash&#xA;# set -x&#xA;&#xA;workdir=&#39;/opt/iperfmon&#39;&#xA;#get data for altoo_office&#xA;downstream=$(/usr/bin/rrdtool lastupdate $workdir/iperfmon.rrd |tail -1|awk &#39;{ print $2}&#39;)&#xA;upstream=$(/usr/bin/rrdtool lastupdate $workdir/iperfmon.rrd |tail -1|awk &#39;{ print $3}&#39;)&#xA;&#xA;echo &amp;quot;0 Iperfmon downstream=$downstream|upstream=$upstream Iperf up- and downstream: $upstream | $downstream (MBit/s)&amp;quot;&#xA;&#xA;#echo &amp;quot;0 My service myvalue=73 My output text which may contain spaces&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

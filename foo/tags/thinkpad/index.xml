@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thinkpad on ICT pages</title>
+    <link>https://example.org/tags/thinkpad/</link>
+    <description>Recent content in Thinkpad on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/thinkpad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/misc-lenovo-trackpoint-scrolling-linux/</link>
+      <pubDate>Fri, 22 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/misc-lenovo-trackpoint-scrolling-linux/</guid>
+      <description>&lt;h1 id=&#34;lenovo-thinkpad-trackpoint-scrolling-on-linux-debian-derivatives&#34;&gt;Lenovo Thinkpad Trackpoint Scrolling on Linux (debian derivatives)&lt;/h1&gt;&#xA;&lt;p&gt;How to configure Linux to use Trackpoint Scrolling on Lenovo Thinkpads:&#xA;&lt;br&gt;&lt;br&gt;&#xA;Create a file &amp;lsquo;20-thinkpad.conf&amp;rsquo;&lt;/p&gt;&#xA;&lt;pre&gt;in /usr/share/X11/xorg.conf.d/&lt;/pre&gt;&#xA;&lt;br&gt;&#xA;with content:&#xA;&lt;pre&gt;Section &#34;InputClass&#34;&#xA;    Identifier &#34;Trackpoint Wheel Emulation&#34;&#xA;    MatchProduct       &#34;TPPS/2 IBM TrackPoint|DualPoint Stick|Synaptics Inc.&lt;br&gt;&#xA;    Composite TouchPad / TrackPoint|ThinkPad USB Keyboard with TrackPoint|ThinkPad&lt;br&gt;  Compact USB Keyboard with TrackPoint|USB Trackpoint pointing device&#34;&#xA;    MatchDevicePath    &#34;/dev/input/event*&#34;&#xA;    Option             &#34;EmulateWheel&#34;          &#34;true&#34;&#xA;    Option             &#34;EmulateWheelButton&#34;    &#34;2&#34;&#xA;    Option             &#34;Emulate3Buttons&#34;       &#34;true&#34;&#xA;    Option             &#34;XAxisMapping&#34;          &#34;6 7&#34;&#xA;    Option             &#34;YAxisMapping&#34;          &#34;4 5&#34;&#xA;EndSection&lt;/pre&gt;&#xA;&lt;pre&gt;restart mdm (for LinuxMint Cinnamon) or reboot.&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

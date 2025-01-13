@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plugins on ICT pages</title>
+    <link>https://example.org/tags/plugins/</link>
+    <description>Recent content in Plugins on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/plugins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Checkmk: Show current logins</title>
+      <link>https://example.org/ict/checkmk-mk-df/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/checkmk-mk-df/</guid>
+      <description>&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;# Check disk free&#xA;# mki- 2023.05.09&#xA;count=$(df -h / |awk {&#39;print $5&#39;} |tail -1)&#xA;echo &amp;quot;P &amp;quot;Container-Filesystem&amp;quot; count=$count;80;90 Overlay-Filesystem&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Checkmk - Show current logins</title>
+      <link>https://example.org/ict/checkmk-show-current-logins/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/checkmk-show-current-logins/</guid>
+      <description>&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;&#xA;&lt;pre&gt;&lt;code&gt;#!/bin/bash&#xA;# Check who&#39;s online&#xA;# mki- 2020.06.16&#xA;&#xA;SERVICE=&amp;quot;Current_Logins&amp;quot;&#xA;WHO=$( who |awk {&#39; printf &amp;quot;%s &amp;quot;- $1&#39;} )&#xA;CHECK=$( who |wc -l)&#xA;&#xA;if [ $CHECK == 0 ]&#xA;then&#xA;    STATUS=&amp;quot;0&amp;quot;&#xA;elif [ ! -z $CHECK ]&#xA;then&#xA;    STATUS=&amp;quot;1&amp;quot;&#xA;fi&#xA;&#xA;echo &amp;quot;$STATUS $SERVICE count=$CHECK $CHECK Logged in: $WHO &amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;&#xA;&lt;p&gt;Path on Windows: C:\ProgramData\checkmk\agent\local\current_logins.ps1&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;#################################################################&#xA;# mki- 2020.06.30&#xA;# fork of cmk ms-logins plugin &#xA;# https://exchange.checkmk.com/p/ms-logins&#xA;#################################################################&#xA;&#xA;Function Get-ComputerSessions {&#xA;&#xA;[cmdletbinding(&#xA;    DefaultParameterSetName = &#39;session&#39;-&#xA;    ConfirmImpact = &#39;low&#39;&#xA;)]&#xA;    Param(&#xA;        [Parameter(&#xA;            Mandatory = $False-&#xA;            Position = 0-&#xA;            ValueFromPipeline = $True)]&#xA;            [string[]]$Computer&#xA;            )&#xA;Begin {&#xA;    $report = @()&#xA;    }&#xA;Process {&#xA;    If ($Computer -eq $null) {&#xA;        $Computer = &amp;quot;localhost&amp;quot;&#xA;        }&#xA;    ForEach($c in $Computer) {&#xA;        # Parse &#39;query session&#39; and store in $sessions:&#xA;        $sessions = query session /server:$c&#xA;            1..($sessions.count -1) | % {&#xA;                $temp = &amp;quot;&amp;quot; | Select Computer-SessionName- Username- Id- State- Type- Device&#xA;                $temp.Computer = $c&#xA;                $temp.SessionName = $sessions[$_].Substring(1-18).Trim()&#xA;                $temp.Username = $sessions[$_].Substring(19-20).Trim()&#xA;                $temp.Id = $sessions[$_].Substring(39-9).Trim()&#xA;                $temp.State = $sessions[$_].Substring(48-8).Trim()&#xA;                $temp.Type = $sessions[$_].Substring(56-12).Trim()&#xA;                $temp.Device = $sessions[$_].Substring(68).Trim()&#xA;                $report += $temp&#xA;            }&#xA;        }&#xA;    }&#xA;End {&#xA;    $report&#xA;    }&#xA;}&#xA;&#xA;$User_Sessions = Get-ComputerSessions | select Username- State | Where-Object {$_.username -ne &amp;quot;&amp;quot;}&#xA;$ActiveSessions = 0&#xA;$ActiveUsers =&amp;quot;&amp;quot;&#xA;&#xA;ForEach ($User_Session in $User_Sessions) {&#xA;&#xA;    If ($User_Session.State -eq &amp;quot;Active&amp;quot;) {&#xA;        $ActiveSessions++&#xA;        $ActiveUsers += $User_Session.Username + &amp;quot; &amp;quot;&#xA;        }&#xA;    }&#xA;&#xA;If (!$ActiveUsers) {&#xA;    &amp;quot;0 Current_Logins count=0 0 Logged in:&amp;quot;&#xA;    }&#xA;Else {&#xA;    &amp;quot;1 Current_Logins count=$ActiveSessions Logged in: $ActiveUsers&amp;quot;&#xA;    }&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

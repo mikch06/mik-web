@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.139.4">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="ICT pages">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<div class="content main__content clearfix">
+		<p>Search the docs!</p>
+<link href="pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
+<script>
+document.write("<br>Last generation date:" + " " +document.lastModified);
+</script>
+	</div>
+	<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/centos7-to-centos8-in-place-upgrade/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-09-17T00:00:00Z">September 17, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="centos7-to-centos8-in-place-upgrade">CentOS7 to CentOS8 in place Upgrade</h1>
+<p>#<q>DRAFT</q></p>
+<h3>Update procedure</h3>
+<pre>
+    Update to the last level
+
+    Install epel repo
+    Make cache fast
+
+yum makecache fast
+
+    Install utils- rpmconfg
+
+yum install -y yum-utils rpmconf 
+
+    Rpmconf: Locate and remove conflicting config files
+
+rpmconf -a
+
+Your choice: N (default choice)
+
+    List packages that are not required
+
+package-cleanup --leaves
+
+    List packages that are older or duplicate
+
+package-cleanup --orphans
+
+    Remove those packages
+
+</pre>
+<p>To give a user rights on a root privileged command:</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/ict/centos7-to-centos8-in-place-upgrade/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/nextcloud-calendar-sql-commands/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-09-03T00:00:00Z">September 03, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/nextcloud/" rel="category">Nextcloud</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="nextcloud-calendar-sql-commands">Nextcloud calendar SQL commands</h1>
+<p>Nextcloud: Use Nextcloud with SQL commands</p>
+<ul>
+<li>
+<p>Nextcloud calendar:</p>
+<p>Select all calendar events older than 31.12.2021 - 23:55:55</p>
+<pre><code>  SELECT * FROM `oc_calendarobjects` WHERE calendarid = 2 AND lastoccurence &lt;= 1640991355;
+
+  - calendarid -&gt; e.g. your birthday calendar
+  - lastoccurence -&gt; timestamp in unixtime
+</code></pre>
+</li>
+</ul>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/manjaro-flameshot-printscreen-shortcut/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-08-26T00:00:00Z">August 26, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="flameshot-with-printscreen-shortcut-on-manjaro">Flameshot with Printscreen Shortcut on Manjaro</h1>
+<p><img src="https://kissel.ch/ict/images/flameshot_logo.svg" alt=""> Flameshot screenshot software<br>
+Create custom Shortcut for opening <a href="https://github.com/flameshot-org/flameshot" target="_blank">Flameshot</a> for printscreens by Keyboard</p>
+<pre>flameshot gui</pre>
+<p><img src="https://kissel.ch/ict/images/flameshot_printscreen.png" alt=""></p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/centos8-operations/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-08-17T00:00:00Z">August 17, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="centos8-operations">CentOS8: Operations</h1>
+<hr>
+<h3 id="restart-networking">Restart Networking:</h3>
+<pre><code>systemctl stop NetworkManager.service
+systemctl start NetworkManager.service
+</code></pre>
+<p>OR:</p>
+<pre><code>nmcli networking off
+nmcli networking on
+
+
+-&gt;
+nmcli n off
+nmcli n on
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/internet-init7-hybrid7-connection-opnsense-firewall/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-17T00:00:00Z">July 17, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="init7---hybrid7-connection-with-opnsense-firewall">Init7 - Hybrid7 connection with Opnsense Firewall</h1>
+<p>If you&rsquo;re using <a href="https://www.init7.net">Init7</a> - Hybrid7 you have to configure pppoe Authentication and VLAN tagging:<br><br>
+<b>Opnsense config step by step:</b></p>
+<ol>
+<li>VLAN (11) Interface creation:<br><br>
+Interfaces → Other Types → VLAN<br><br>
+<img src="https://kissel.ch/ict/images/hybrid7_vlan.png" alt=""></li>
+<li>Interface Assignment:
+<img src="https://kissel.ch/ict/images/hybrid7_interfaces.png" alt=""></li>
+<li>Assign new Interface to WAN:<br>
+<img src="https://kissel.ch/ict/images/hybrid7_wan.png" alt=""></li>
+<li>Configure WAN Interface:<br>
+Interfaces → [WAN]
+<img src="https://kissel.ch/ict/images/hybrid7_advancedoptions.png" alt="">
+(rest is equal)</li>
+<li>Finally check if you are &ldquo;up&rdquo;:
+<img src="https://kissel.ch/ict/images/hybrid7_overview.png" alt=""></li>
+</ol>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/linux-socks-proxy-know-how/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-15T00:00:00Z">July 15, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="socks5-proxy-know-how">SOCKS(5) Proxy Know How</h1>
+<h3>SOCKS Proxy with Putty and FoxyProxy:</h3>
+![](https://kissel.ch/ict/images/putty-socks5-config1.png)
+![](https://kissel.ch/ict/images/putty-socks5-config2.png)
+<br>
+<br>
+Define your free proxy Port (2409)
+<br><br>
+![](https://kissel.ch/ict/images/foxyproxy-config.png)
+<br>
+After enabling FoxyProxy you're able to connect your home by ssh and browse local services.
+<hr>
+SOCKS Proxy tunnel by shell:
+<pre>ssh -L 2409:localhost:2409 'user'@'host'
+on cyon host:
+ssh -D 2409 'user'@'host'</pre>
+SOCKS Proxy tunnel over another hop:
+<pre>
+connection to 1. host:
+ssh -L 2409:localhost:2409 user@1host.ch
+<p>connection on 1. to 2. host:
+ssh -D 2409 <a href="mailto:user@2host.ch">user@2host.ch</a></p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/ict/linux-socks-proxy-know-how/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/centos-new-partition-on-existing-disk/" rel="bookmark">
+			CentOS New Partition on existing disk
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-08T00:00:00Z">July 08, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h3 id="partitioning">Partitioning</h3>
+<pre><code>fdisk -l
+
+fdisk /dev/sda
+Welcome to fdisk (util-linux 2.23.2).
+ 
+Changes will remain in memory only- until you decide to write them.
+Be careful before using the write command.
+ 
+ 
+Command (m for help): p
+ 
+Disk /dev/sda: 322.1 GB- 322122547200 bytes- 629145600 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x000a6c5c
+ 
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200    16777215     7339008   8e  Linux LVM
+ 
+ 
+Command (m for help): n
+Partition type:
+   p   primary (2 primary- 0 extended- 2 free)
+   e   extended
+Select (default p):
+Using default response p
+Partition number (3-4- default 3):
+First sector (16777216-629145599- default 16777216):
+Using default value 16777216
+Last sector- +sectors or +size{K-M-G} (16777216-629145599- default 629145599):
+Using default value 629145599
+Partition 3 of type Linux and of size 292 GiB is set
+ 
+Command (m for help): t
+Partition number (1-3- default 3):
+Hex code (type L to list all codes): L
+ 
+ 0  Empty           24  NEC DOS         81  Minix / old Lin bf  Solaris
+ 1  FAT12           27  Hidden NTFS Win 82  Linux swap / So c1  DRDOS/sec (FAT-
+ 2  XENIX root      39  Plan 9          83  Linux           c4  DRDOS/sec (FAT-
+ 3  XENIX usr       3c  PartitionMagic  84  OS/2 hidden C:  c6  DRDOS/sec (FAT-
+ 4  FAT16 &lt;32M      40  Venix 80286     85  Linux extended  c7  Syrinx
+ 5  Extended        41  PPC PReP Boot   86  NTFS volume set da  Non-FS data
+ 6  FAT16           42  SFS             87  NTFS volume set db  CP/M / CTOS / .
+ 7  HPFS/NTFS/exFAT 4d  QNX4.x          88  Linux plaintext de  Dell Utility
+ 8  AIX             4e  QNX4.x 2nd part 8e  Linux LVM       df  BootIt
+ 9  AIX bootable    4f  QNX4.x 3rd part 93  Amoeba          e1  DOS access
+ a  OS/2 Boot Manag 50  OnTrack DM      94  Amoeba BBT      e3  DOS R/O
+ b  W95 FAT32       51  OnTrack DM6 Aux 9f  BSD/OS          e4  SpeedStor
+ c  W95 FAT32 (LBA) 52  CP/M            a0  IBM Thinkpad hi eb  BeOS fs
+ e  W95 FAT16 (LBA) 53  OnTrack DM6 Aux a5  FreeBSD         ee  GPT
+ f  W95 Ext'd (LBA) 54  OnTrackDM6      a6  OpenBSD         ef  EFI (FAT-12/16/
+10  OPUS            55  EZ-Drive        a7  NeXTSTEP        f0  Linux/PA-RISC b
+11  Hidden FAT12    56  Golden Bow      a8  Darwin UFS      f1  SpeedStor
+12  Compaq diagnost 5c  Priam Edisk     a9  NetBSD          f4  SpeedStor
+14  Hidden FAT16 &lt;3 61  SpeedStor       ab  Darwin boot     f2  DOS secondary
+16  Hidden FAT16    63  GNU HURD or Sys af  HFS / HFS+      fb  VMware VMFS
+17  Hidden HPFS/NTF 64  Novell Netware  b7  BSDI fs         fc  VMware VMKCORE
+18  AST SmartSleep  65  Novell Netware  b8  BSDI swap       fd  Linux raid auto
+1b  Hidden W95 FAT3 70  DiskSecure Mult bb  Boot Wizard hid fe  LANstep
+1c  Hidden W95 FAT3 75  PC/IX           be  Solaris boot    ff  BBT
+1e  Hidden W95 FAT1 80  Old Minix
+Hex code (type L to list all codes): 8e
+Changed type of partition 'Linux' to 'Linux LVM'
+ 
+Command (m for help): w
+The partition table has been altered!
+ 
+Calling ioctl() to re-read partition table.
+ 
+WARNING: Re-reading the partition table failed with error 16: Device or resource busy.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+ 
+partprobe
+[root@sourcerepos ~]# lsblk
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda               8:0    0  300G  0 disk
+├─sda1            8:1    0    1G  0 part /boot
+├─sda2            8:2    0    7G  0 part
+│ ├─centos-root 253:0    0  6.2G  0 lvm  /
+│ └─centos-swap 253:1    0  820M  0 lvm  [SWAP]
+└─sda3            8:3    0  292G  0 part
+sr0              11:0    1 1024M  0 rom
+</code></pre>
+<p>To give a user rights on a root privileged command:</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/ict/centos-new-partition-on-existing-disk/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/centos-cryptsetup-luks/" rel="bookmark">
+			CentOS Cryptsetup luks / dm_crypt
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-07T00:00:00Z">July 07, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/centos/" rel="category">Centos</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Preparation:</p>
+<pre>yum -y install cryptsetup
+
+modprobe dm_crypt
+(enables crypt)
+
+lsmod |grep dm_crypt
+dm_crypt               27346  0
+dm_mod                124461  11 dm_log-dm_mirror-dm_crypt
+(checks crypt enabling)
+</pre>
+<p>Cryptsetup:</p>
+<pre>pvcreate /dev/sdb
+    Physical volume "/dev/sdb" successfully created.
+
+vgextend centos /dev/sdb
+    Volume group "system" successfully extended
+
+lvcreate -n lv_encrypted -L 10G system
+    Logical volume "lv_encrypted" created.</pre>
+<p>Cryptdevice:</p>
+<pre>
+cryptsetup luksFormat /dev/system/lv_encrypted
+
+cryptsetup luksOpen /dev/system/lv_encrypted encrypted
+    
+mkfs.xfs /dev/mapper/encrypted
+    
+mkdir /encrypted
+    
+mount /dev/mapper/encrypted /encrypted
+    
+# lsblk
+NAME                    MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sda                       8:0    0   10G  0 disk
+├─sda1                    8:1    0  512M  0 part  /boot
+└─sda2                    8:2    0  9.5G  0 part
+    ├─system-root         253:0    0  7.5G  0 lvm   /
+    ├─system-swap         253:1    0    2G  0 lvm   [SWAP]
+    └─system-lv_encrypted 253:2    0   10G  0 lvm
+    └─encrypted         253:3    0   10G  0 crypt /encrypted
+sdb                       8:16   0   10G  0 disk
+└─system-lv_encrypted   253:2    0   10G  0 lvm
+    └─encrypted           253:3    0   10G  0 crypt /encrypted
+sr0      
+</pre>
+<p>Increase encrypted device:<br>
+(close &amp; unmount before)</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/ict/centos-cryptsetup-luks/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/centos-filesystem-operations/" rel="bookmark">
+			Filesystem operations (rescan- create- resize- xfs)
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-07-02T00:00:00Z">July 02, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/centos/" rel="category">Centos</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h3 id="disksh3">Disks</h3></h3>
+<p>Rescan existing disks:</p>
+<pre>echo 1 > /sys/class/scsi_device/1\:0\:1\:0/device/rescan</pre>
+<p>Check new disk:</p>
+<pre>fdisk -l /dev/sdb</pre>
+<h1 id="quick-new-disk">Quick new disk</h1>
+<h2 id="create-new-disk-of-physical-volume-if-you-see-it-with-fdisk--l">Create new disk of physical volume if you see it with &lsquo;fdisk -l&rsquo;</h2>
+<pre><code>pvcreate /dev/sdb
+</code></pre>
+<p>Extend existing volume group with new disk</p>
+<pre><code>vgextend rl /dev/sdb
+</code></pre>
+<p>Extend existing logical volume to the max</p>
+<pre><code>lvextend -l +100%FREE /dev/rl/root
+</code></pre>
+<p>Grow existing files system</p>
+<pre><code>xfs_growfs /dev/rl/root
+</code></pre>
+<h3>Volumes</h3>
+<p>Physical / Logical Volumes</p>
+Create physical volume
+<pre>pvcreate /dev/sda3
+    Physical volume "/dev/sda3" successfully created.</pre>
+Resize physical volume (e.g. extended in VMware)   
+<pre>pvresize /dev/sdb</pre>
+<pre>pvdisplay</pre>
+Extend physical volume group 
+<pre>vgextend centos /dev/sda3
+    Volume group "centos" successfully extended​</pre>
+<pre>vgdisplay</pre>
+Extend logical volume<br>
+in G'igs
+<pre>lvextend -L +8G /dev/system/volume</pre>
+or full (using everything)
+<pre>lvextend -l 100%FREE /dev/mapper/volume</pre>
+Grow filesystem
+<pre>xfs_growfs /dev/system/volume</pre>
+Create new logical volume
+<pre>mkfs.xfs /dev/centos/volume</pre>
+see: <a href="centos-new-partition-on-existing-disk.html">CentOS New Partition on existing disk</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/internet-speed/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-06-19T00:00:00Z">June 19, 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="speedtest">Speedtest</h1>
+<p>2020.06.19
+<img src="https://kissel.ch/ict/images/internet_speed_200619.png" alt=""></p>
+	</div>
+</article>
+</main>
+
+<div class="pagination">
+	<a class="pagination__item pagination__item--prev btn" href="/">«</a>
+	<span class="pagination__item pagination__item--current">2/6</span>
+	<a class="pagination__item pagination__item--next btn" href="/page/3/">»</a>
+</div>
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/ict/checkmk-check-podman/">Checkmk check podman containers</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/checkmk-script-read-from-rrd/">Checkmk local script</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/opnsense-acme-client/">Opnsense acme-client</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/checkmk-mk-df/">Checkmk: Show current logins</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/homeassistant-config/">Homeassistant config</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/github-access-token/">Github access tokens</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/opnsense-cronjob/"></a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/linux-ssh-commands/"></a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/javascript/"></a></li>
+			<li class="widget__item"><a class="widget__link" href="/ict/checkmk-snmpd/">Checkmk snmp commands</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/apu/">Apu</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/centos/">Centos</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/checkmk/">Checkmk</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/homeassistant/">Homeassistant</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/joomla/">Joomla</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/linux/">Linux</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/macos/">Macos</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/nextcloud/">Nextcloud</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/nginx/">Nginx</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/opnsense/">Opnsense</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/solaris/">Solaris</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/synology/">Synology</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/virtualbox/">Virtualbox</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/windows/">Windows</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/algorithms/" title="Algorithms">Algorithms</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/apu/" title="Apu">Apu</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/backup/" title="Backup">Backup</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/basic-auth/" title="Basic Auth">Basic Auth</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/boottime/" title="Boottime">Boottime</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cache/" title="Cache">Cache</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos/" title="Centos">Centos</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cert/" title="Cert">Cert</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/certs/" title="Certs">Certs</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/certs-tls/" title="Certs-Tls">Certs-Tls</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/checkmk/" title="Checkmk">Checkmk</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/coreboot/" title="Coreboot">Coreboot</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cron/" title="Cron">Cron</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cryptsetup/" title="Cryptsetup">Cryptsetup</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dm_crypt/" title="Dm_crypt">Dm_crypt</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fdisk/" title="Fdisk">Fdisk</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/flameshot/" title="Flameshot">Flameshot</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/flush/" title="Flush">Flush</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/foxyproxy/" title="Foxyproxy">Foxyproxy</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fstab/" title="Fstab">Fstab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github/" title="Github">Github</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/homeassistant/" title="Homeassistant">Homeassistant</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hostnamectl/" title="Hostnamectl">Hostnamectl</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/howtos/" title="Howtos">Howtos</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hybrid7/" title="Hybrid7">Hybrid7</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ict/" title="Ict">Ict</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/init7/" title="Init7">Init7</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ip-block/" title="IP Block">IP Block</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ipaddr/" title="Ipaddr">Ipaddr</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ipv6/" title="Ipv6">Ipv6</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/javascript/" title="Javascript">Javascript</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/joomla/" title="Joomla">Joomla</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/key/" title="Key">Key</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lenovo/" title="Lenovo">Lenovo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/localcheck/" title="Localcheck">Localcheck</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/locale/" title="Locale">Locale</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/locale-status/" title="Locale-Status">Locale-Status</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/logical-volume/" title="Logical Volume">Logical Volume</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/luks/" title="Luks">Luks</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lvextend/" title="Lvextend">Lvextend</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lvm/" title="Lvm">Lvm</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lvresize/" title="Lvresize">Lvresize</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/macos/" title="MacOS">MacOS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mailq/" title="Mailq">Mailq</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mailx/" title="Mailx">Mailx</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/manjaro/" title="Manjaro">Manjaro</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mariadb/" title="Mariadb">Mariadb</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/monitoring/" title="Monitoring">Monitoring</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mount/" title="Mount">Mount</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/networking/" title="Networking">Networking</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nextcloud/" title="Nextcloud">Nextcloud</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nfs/" title="Nfs">Nfs</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="Nginx">Nginx</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nmcli/" title="Nmcli">Nmcli</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/openssl/" title="Openssl">Openssl</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/opnsense/" title="Opnsense">Opnsense</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/partitioning/" title="Partitioning">Partitioning</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/password-reset/" title="Password Reset">Password Reset</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pcengines/" title="Pcengines">Pcengines</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/physical-volume/" title="Physical Volume">Physical Volume</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/plugins/" title="Plugins">Plugins</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/postfix/" title="Postfix">Postfix</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/postqueue/" title="Postqueue">Postqueue</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/putty/" title="Putty">Putty</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pvresize/" title="Pvresize">Pvresize</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/roundcube/" title="Roundcube">Roundcube</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rsa/" title="Rsa">Rsa</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/scrolling/" title="Scrolling">Scrolling</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/shell/" title="Shell">Shell</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/smtp/" title="Smtp">Smtp</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/socks5/" title="Socks5">Socks5</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/solaris11/" title="Solaris11">Solaris11</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/solaris11--unix-zfs/" title="Solaris11 -Unix-Zfs">Solaris11 -Unix-Zfs</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/speedtest/" title="Speedtest">Speedtest</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh/" title="Ssh">Ssh</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh-keygen/" title="Ssh-Keygen">Ssh-Keygen</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sudo/" title="Sudo">Sudo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/synology/" title="Synology">Synology</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/systemctl/" title="Systemctl">Systemctl</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/systemd/" title="Systemd">Systemd</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/telnet/" title="Telnet">Telnet</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/template/" title="Template">Template</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/thinkpad/" title="Thinkpad">Thinkpad</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/trackpoint/" title="Trackpoint">Trackpoint</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/unix--dns/" title="Unix- DNS">Unix- DNS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/user/" title="User">User</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtualbox/" title="VirtualBox">VirtualBox</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtualbox-vdisk/" title="VirtualBox-Vdisk">VirtualBox-Vdisk</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xfs/" title="Xfs">Xfs</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xfs_growfs/" title="Xfs_growfs">Xfs_growfs</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
