@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on ICT pages</title>
+    <link>https://example.org/tags/github/</link>
+    <description>Recent content in Github on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github access tokens</title>
+      <link>https://example.org/ict/github-access-token/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/github-access-token/</guid>
+      <description>&lt;p&gt;Repo usage with username and password on github is deprecated.&lt;/p&gt;&#xA;&lt;p&gt;Use Personal access tokens: &lt;a href=&#34;https://github.com/settings/tokens&#34;&gt;https://github.com/settings/tokens&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;or: Github -&amp;gt; Settings -&amp;gt; Developer Settings -&amp;gt; Personal access tokens -&amp;gt; Tokens (classic)&lt;/p&gt;&#xA;&lt;h2 id=&#34;to-store-the-token-credential-for-your-machine&#34;&gt;To store the token (credential) for your machine:&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;git config credential.helper store&#xA;(store is example)&#xA;&#xA;after that:&#xA;&#xA;git push&#xA;&#xA;Login with username and Token!&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joomla on ICT pages</title>
+    <link>https://example.org/categories/joomla/</link>
+    <description>Recent content in Joomla on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/categories/joomla/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/joomla-admin-password-reset/</link>
+      <pubDate>Tue, 08 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/joomla-admin-password-reset/</guid>
+      <description>&lt;p&gt;#Joomla! Admin Passwort reset&lt;/p&gt;&#xA;&lt;p&gt;Lost the admin password of your Joomla! page or have no possibility to login on backend?&lt;/p&gt;&#xA;&lt;p&gt;The admin password can be reset by database (e.g. phpMyAdmin).&lt;br&gt;&#xA;Login to your database server and navigate to table &amp;lsquo;_users&amp;rsquo;.&lt;/p&gt;&#xA;&lt;p&gt;Put the following hash to the password field of an Superadmin:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;433903e0a9d6a712e00251e44d29bf87:UJ0b9J5fufL3FKfCc0TLsYJBh2PFULvT&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;After that you can login with:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;admin / admin&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Please don&amp;rsquo;t forget to change the password by the user administration.&#xA;###With SQL-Script:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

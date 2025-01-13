@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smtp on ICT pages</title>
+    <link>https://example.org/tags/smtp/</link>
+    <description>Recent content in Smtp on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/smtp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/linux-smtp-telnet-syntax/</link>
+      <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/linux-smtp-telnet-syntax/</guid>
+      <description>&lt;h1 id=&#34;smtp-telnet-syntax&#34;&gt;Smtp telnet syntax&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;telnet &amp;lt;MAILSERVER&amp;gt; 25&#xA;&#xA;HELO &amp;lt;MAILSERVER&amp;gt;&#xA;&#xA;mail from: test-mail@wiki.kissel.ch&#xA;&#xA;rcpt to: receiver@&amp;lt;MAILSERVER&amp;gt;&#xA;&#xA;data&#xA;from: test-mail@wiki.kissel.ch&#xA;to: receiver@&amp;lt;MAILSERVER&amp;gt;&#xA;subject: TestMessage&#xA;&#xA;Hello World!&#xA;&#xA;.&#xA;&#xA;quit&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

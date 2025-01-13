@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ipaddr on ICT pages</title>
+    <link>https://example.org/tags/ipaddr/</link>
+    <description>Recent content in Ipaddr on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/ipaddr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure static IP address</title>
+      <link>https://example.org/ict/centos-configure-static-ip-address/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/centos-configure-static-ip-address/</guid>
+      <description>&lt;p&gt;Position of the interface configuration files:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/etc/sysconfig/network-scripts&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;ip addr&lt;/p&gt;&#xA;&lt;p&gt;shows the names of available interfaces:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;enp0s3: &amp;lt;BROADCAST-MULTICAST-UP-LOWER_UP&amp;gt; mtu 1500 qdisc&#xA;pfifo_fast state UP qlen 1000&#xA;link/ether 08:00:27:66:c7:99 brd ff:ff:ff:ff:ff:ff&#xA;inet 192.168.0.40/24 brd 192.168.0.255 scope global enp0s3&#xA;valid_lft forever preferred_lft forever&#xA;inet6 fe80::a00:27ff:fe66:c799/64 scope link&#xA;valid_lft forever preferred_lft forever&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Now the config file ifcfg-enp0s3 can be edited with the static config:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;TYPE=&amp;quot;Ethernet&amp;quot;&#xA;NAME=&amp;quot;enp0s3&amp;quot;&#xA;ONBOOT=&amp;quot;yes&amp;quot;&#xA;IPADDR=&amp;quot;192.168.0.40&amp;quot;  &#xA;BOOTPROTO=&amp;quot;static&amp;quot; &#xA;GATEWAY=&amp;quot;192.168.0.1&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

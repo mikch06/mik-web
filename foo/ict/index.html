@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Icts - ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/ict/index.xml" title="ICT pages">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Icts</h1>
+	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/checkmk-check-podman/" rel="bookmark">
+			Checkmk check podman containers
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-12-02T00:00:00Z">December 02, 2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/checkmk/" rel="category">Checkmk</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Checkmk local script:</p>
+<pre><code># /usr/lib/check_mk_agent/local/check_podman.sh
+#!/bin/bash
+# Podman check
+# mik, 2024.11.29
+
+# Podman user
+puser=admin
+
+# Container overview
+ncont=$(su - $puser -c &quot;podman info|grep -A 4 containerStore&quot;|head -2|tail -1|awk {'print $2'})
+rcont=$(su - $puser -c &quot;podman info|grep -A 4 containerStore&quot;|head -4|tail -1|awk {'print $2'})
+scont=$(su - $puser -c &quot;podman info|grep -A 4 containerStore&quot;|head -5|tail -1|awk {'print $2'})
+
+# Checks: Images, Containers, Volumes
+images=$(su - $puser -c &quot;podman system df&quot;|head -2|tail -1|awk {'print $4'})
+containers=$(su - $puser -c &quot;podman system df&quot;|head -3|tail -1|awk {'print $4'})
+volumes=$(su - $puser -c &quot;podman system df&quot;|head -3|tail -1|awk {'print $5'})
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/checkmk-script-read-from-rrd/" rel="bookmark">
+			Checkmk local script
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-03-15T00:00:00Z">March 15, 2024</time>
+	<time class="meta__text" datetime="2024-11-18T00:00:00Z">(Last Modified: November 18, 2024)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/checkmk/" rel="category">Checkmk</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Checkmk local script:</p>
+<p>Read out data from an rrd file and show the values e.g. bandwith up- and downstream:</p>
+<pre><code># /usr/lib/check_mk_agent/local
+
+#!/bin/bash
+# set -x
+
+workdir='/opt/iperfmon'
+#get data for altoo_office
+downstream=$(/usr/bin/rrdtool lastupdate $workdir/iperfmon.rrd |tail -1|awk '{ print $2}')
+upstream=$(/usr/bin/rrdtool lastupdate $workdir/iperfmon.rrd |tail -1|awk '{ print $3}')
+
+echo &quot;0 Iperfmon downstream=$downstream|upstream=$upstream Iperf up- and downstream: $upstream | $downstream (MBit/s)&quot;
+
+#echo &quot;0 My service myvalue=73 My output text which may contain spaces&quot;
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/opnsense-acme-client/" rel="bookmark">
+			Opnsense acme-client
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-07-20T00:00:00Z">July 20, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense/" rel="category">Opnsense</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h2 id="acme-client--lets-encrypt">Acme client- let&rsquo;s encrypt</h2>
+<h3 id="issue-new-cert-in-opnsense-ui">Issue new cert in opnsense UI</h3>
+<p>Wait for a long time until it&rsquo;s issued with acme.sh client.</p>
+<h3 id="certs-on-system">Certs on system</h3>
+<p>Find all certs in:</p>
+<pre><code>/var/etc/acme-client/
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/checkmk-mk-df/" rel="bookmark">
+			Checkmk: Show current logins
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-05-09T00:00:00Z">May 09, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/checkmk/" rel="category">Checkmk</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h3 id="linux">Linux</h3>
+<pre><code># Check disk free
+# mki- 2023.05.09
+count=$(df -h / |awk {'print $5'} |tail -1)
+echo &quot;P &quot;Container-Filesystem&quot; count=$count;80;90 Overlay-Filesystem&quot;
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/homeassistant-config/" rel="bookmark">
+			Homeassistant config
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-02-01T00:00:00Z">February 01, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/homeassistant/" rel="category">Homeassistant</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="add-ons">Add-ons</h1>
+<h2 id="deconz-add-on">deConz add-on</h2>
+<p>deConz -&gt; config</p>
+<p>Options:</p>
+<p>use serial connection:
+/dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2651844-if00</p>
+<h2 id="nginx-home-assistant-ssl-proxy-add-on">NGINX Home Assistant SSL proxy add-on</h2>
+<p>no special config needed</p>
+<p>but</p>
+<p>upload cert and privkey file</p>
+<p>-&gt; that&rsquo;s why you have to use the
+Terminal&amp;SSH add-on</p>
+<h1 id="gerätedienste--integration">Geräte&amp;Dienste / Integration</h1>
+<ul>
+<li>Integration hinzufügen</li>
+<li>deConz</li>
+<li>Take ipaddress and port -&gt; for that check API information in deConz Gateway (go by add-on)</li>
+</ul>
+<p><img src="https://kissel.ch/ict/images/deconz-gateway-config.png" alt="deconz-gateway-config.png"></p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/github-access-token/" rel="bookmark">
+			Github access tokens
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-10-26T00:00:00Z">October 26, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Repo usage with username and password on github is deprecated.</p>
+<p>Use Personal access tokens: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
+<p>or: Github -&gt; Settings -&gt; Developer Settings -&gt; Personal access tokens -&gt; Tokens (classic)</p>
+<h2 id="to-store-the-token-credential-for-your-machine">To store the token (credential) for your machine:</h2>
+<pre><code>git config credential.helper store
+(store is example)
+
+after that:
+
+git push
+
+Login with username and Token!
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/opnsense-cronjob/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-05-10T00:00:00Z">May 10, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense/" rel="category">Opnsense</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="opnsense-cronjobs">Opnsense cronjobs</h1>
+<p>Nice Web Tutorial:
+<a href="https://www.kuerbis.org/2022/02/kurztipp-custom-cronjobs-mit-opnsense/">Custom Cronjobs mit OPNsense</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/linux-ssh-commands/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-01-19T00:00:00Z">January 19, 2022</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="linux-ssh-key-commands">Linux ssh key commands</h1>
+<p>Check a key</p>
+<pre>ssh-keygen -lf [key]</pre>
+<p>Scan a key</p>
+<pre>ssh-keyscan [host]</pre>
+<p>&ndash;&gt; then do a scan ;-)</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/javascript/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-11-08T00:00:00Z">November 08, 2021</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="javascripts">JavaScripts</h1>
+<h2 id="last-edit-in-html">Last edit in HTML</h2>
+<pre><code>&lt;script&gt;
+document.write(&quot;last edit:&quot; + &quot; &quot; +document.lastModified);
+&lt;/script&gt;
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/checkmk-snmpd/" rel="bookmark">
+			Checkmk snmp commands
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-04-28T00:00:00Z">April 28, 2021</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Commands to debug snmp monitoring with Checkmk</p>
+<pre>
+cmk --debug -D hostname
+cmk --debug -vvn hostname
+cmk --check -Ivv hostname
+</pre>
+	</div>
+</article>
+</main>
+
+<div class="pagination">
+	<span class="pagination__item pagination__item--current">1/6</span>
+	<a class="pagination__item pagination__item--next btn" href="/ict/page/2/">»</a>
+</div>
+
+			</div>
+			
+
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

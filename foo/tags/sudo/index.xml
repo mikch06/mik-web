@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sudo on ICT pages</title>
+    <link>https://example.org/tags/sudo/</link>
+    <description>Recent content in Sudo on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/sudo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/centos-sudoers/</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/centos-sudoers/</guid>
+      <description>&lt;h1 id=&#34;sudoers&#34;&gt;Sudoers&lt;/h1&gt;&#xA;&lt;p&gt;To give a user rights on a root privileged command:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;vi /etc/sudoers&#xA;&amp;lt;USER&amp;gt; ALL = NOPASSWD: /bin/systemctl restart httpd&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Now the user could restart the httpd deamon:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;sudo systemctl restart httpd&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

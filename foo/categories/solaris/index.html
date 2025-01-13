@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Solaris - ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/categories/solaris/index.xml" title="ICT pages">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Solaris</h1>
+	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/solaris11-set-dns-and-nameservice/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2015-09-07T00:00:00Z">September 07, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/solaris/" rel="category">Solaris</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="configure-dns-client">Configure DNS Client</h1>
+<p>Configure DNS Client:</p>
+<pre><code>svccfg -s network/dns/client
+svc:/network/dns/client&gt; setprop config/nameserver =
+(DNSSERVER1 DNSSERVER2)
+svc:/network/dns/client&gt; setprop config/search = &quot;Your Search Domain&quot;
+svc:/network/dns/client&gt; setprop config/domain = &quot;YourDomain.ch&quot;
+svcadm refresh network/dns/client
+svcadm restart network/dns/client
+</code></pre>
+<p>Configure name service (nsswitch.conf):</p>
+<pre><code>svccfg -s system/name-service/switch
+listprop config
+setprop config/host = &quot;files dns&quot;
+setprop config/ipnode = astring: &quot;files dns&quot;
+end
+svcadm refresh name-service/switch
+sv
+</code></pre>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/ict/solaris11-resize-diskspace-on-solaris/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2015-08-15T00:00:00Z">August 15, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/solaris/" rel="category">Solaris</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h1 id="resize-disk-space-on-solaris">Resize Disk Space on Solaris</h1>
+<pre><code>format -e
+# growfs -M /mount-point /dev/md/rdsk/volumename
+# growfs -M /home2 /dev/md/rdsk/d10
+zfs set volsize=5G rpool/swap
+swap -a /dev/zvol/dsk/rpool/swap
+</code></pre>
+	</div>
+</article>
+</main>
+
+
+			</div>
+			
+
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

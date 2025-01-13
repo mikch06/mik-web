@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rsa on ICT pages</title>
+    <link>https://example.org/tags/rsa/</link>
+    <description>Recent content in Rsa on ICT pages</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/rsa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/ict/linux-ssh-commands/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/ict/linux-ssh-commands/</guid>
+      <description>&lt;h1 id=&#34;linux-ssh-key-commands&#34;&gt;Linux ssh key commands&lt;/h1&gt;&#xA;&lt;p&gt;Check a key&lt;/p&gt;&#xA;&lt;pre&gt;ssh-keygen -lf [key]&lt;/pre&gt;&#xA;&lt;p&gt;Scan a key&lt;/p&gt;&#xA;&lt;pre&gt;ssh-keyscan [host]&lt;/pre&gt;&#xA;&lt;p&gt;&amp;ndash;&amp;gt; then do a scan ;-)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

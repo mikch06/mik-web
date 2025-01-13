@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Checkmk - Show current logins - ICT pages</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="ICT pages" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ICT pages</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Checkmk - Show current logins</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-06-16T00:00:00Z">June 16, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/checkmk/" rel="category">Checkmk</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux">Linux</a></li>
+        <li><a href="#windows">Windows</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h3 id="linux">Linux</h3>
+<pre><code>#!/bin/bash
+# Check who's online
+# mki- 2020.06.16
+
+SERVICE=&quot;Current_Logins&quot;
+WHO=$( who |awk {' printf &quot;%s &quot;- $1'} )
+CHECK=$( who |wc -l)
+
+if [ $CHECK == 0 ]
+then
+    STATUS=&quot;0&quot;
+elif [ ! -z $CHECK ]
+then
+    STATUS=&quot;1&quot;
+fi
+
+echo &quot;$STATUS $SERVICE count=$CHECK $CHECK Logged in: $WHO &quot;
+</code></pre>
+<h3 id="windows">Windows</h3>
+<p>Path on Windows: C:\ProgramData\checkmk\agent\local\current_logins.ps1</p>
+<pre><code>#################################################################
+# mki- 2020.06.30
+# fork of cmk ms-logins plugin 
+# https://exchange.checkmk.com/p/ms-logins
+#################################################################
+
+Function Get-ComputerSessions {
+
+[cmdletbinding(
+    DefaultParameterSetName = 'session'-
+    ConfirmImpact = 'low'
+)]
+    Param(
+        [Parameter(
+            Mandatory = $False-
+            Position = 0-
+            ValueFromPipeline = $True)]
+            [string[]]$Computer
+            )
+Begin {
+    $report = @()
+    }
+Process {
+    If ($Computer -eq $null) {
+        $Computer = &quot;localhost&quot;
+        }
+    ForEach($c in $Computer) {
+        # Parse 'query session' and store in $sessions:
+        $sessions = query session /server:$c
+            1..($sessions.count -1) | % {
+                $temp = &quot;&quot; | Select Computer-SessionName- Username- Id- State- Type- Device
+                $temp.Computer = $c
+                $temp.SessionName = $sessions[$_].Substring(1-18).Trim()
+                $temp.Username = $sessions[$_].Substring(19-20).Trim()
+                $temp.Id = $sessions[$_].Substring(39-9).Trim()
+                $temp.State = $sessions[$_].Substring(48-8).Trim()
+                $temp.Type = $sessions[$_].Substring(56-12).Trim()
+                $temp.Device = $sessions[$_].Substring(68).Trim()
+                $report += $temp
+            }
+        }
+    }
+End {
+    $report
+    }
+}
+
+$User_Sessions = Get-ComputerSessions | select Username- State | Where-Object {$_.username -ne &quot;&quot;}
+$ActiveSessions = 0
+$ActiveUsers =&quot;&quot;
+
+ForEach ($User_Session in $User_Sessions) {
+
+    If ($User_Session.State -eq &quot;Active&quot;) {
+        $ActiveSessions++
+        $ActiveUsers += $User_Session.Username + &quot; &quot;
+        }
+    }
+
+If (!$ActiveUsers) {
+    &quot;0 Current_Logins count=0 0 Logged in:&quot;
+    }
+Else {
+    &quot;1 Current_Logins count=$ActiveSessions Logged in: $ActiveUsers&quot;
+    }
+</code></pre>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/checkmk/" rel="tag">checkmk</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/plugins/" rel="tag">plugins</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 ICT pages.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
