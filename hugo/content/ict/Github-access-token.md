@@ -15,7 +15,7 @@ or: Github -> Settings -> Developer Settings -> Personal access tokens -> Tokens
 ## To store the token (credential) for your machine:
 
 
-    git config credential.helper store
+    git config --global credential.helper store
     (store is example)
 
     after that:
